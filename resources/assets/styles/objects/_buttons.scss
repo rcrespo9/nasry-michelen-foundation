@@ -1,11 +1,12 @@
-.c-btn {
+.o-btn {
   background-color: $green;
 
   @include button;
 }
 
-.c-btn--secondary {
+.o-btn--secondary {
   background-color: transparent;
+  border: 1px solid;
 
   @include button;
 }
