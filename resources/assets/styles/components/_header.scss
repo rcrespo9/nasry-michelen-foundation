@@ -1,6 +1,13 @@
+.c-header {
+  height: $header-height;
+  background-color: $white;
+}
+
 .c-header__wrap {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .nav__list {
@@ -10,6 +17,10 @@
 
   .menu-item {
     display: inline-block;
+
+    &:not(:first-of-type) {
+      margin-left: ms(4);
+    }
   }
 
   a {

@@ -2,6 +2,7 @@
 @import "variables/colors";
 @import "variables/layout";
 @import "variables/typography";
+@import "variables/elements";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -20,6 +21,7 @@
 @import "helpers/mixins";
 @import "base/base";
 @import "base/typography";
+@import "base/elements";
 @import "helpers/wp-classes";
 @import "layouts/layouts";
 @import "layouts/tinymce";

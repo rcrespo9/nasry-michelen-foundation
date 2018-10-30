@@ -1,0 +1,11 @@
+.c-btn {
+  background-color: $green;
+
+  @include button;
+}
+
+.c-btn--secondary {
+  background-color: transparent;
+
+  @include button;
+}

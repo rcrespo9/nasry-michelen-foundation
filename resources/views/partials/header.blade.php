@@ -7,7 +7,7 @@
       @endif
     </nav>
     <div class="c-header__misc">
-      <span>EN | ES</span>
+      <a href="#" class="c-btn">Donate</a>
     </div>
   </div>
 </header>
