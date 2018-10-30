@@ -9,3 +9,9 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@mixin uppercase() {
+  text-transform: uppercase;
+  letter-spacing: ms(-11);
+  font-weight: map-get($font-weight, bold);
+}

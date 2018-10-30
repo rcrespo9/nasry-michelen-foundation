@@ -1,2 +1,21 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
+.c-header__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .menu-item {
+    display: inline-block;
+  }
+
+  a {
+    color: $dark-gray;
+
+    @include uppercase;
+  }
+}
+

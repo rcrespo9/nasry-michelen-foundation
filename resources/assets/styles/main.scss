@@ -1,3 +1,4 @@
+@import '~modularscale-sass';
 @import "variables/colors";
 @import "variables/layout";
 @import "variables/typography";
@@ -13,7 +14,6 @@
  */
 // @import "~some-node-module";
 @import "~normalize.css";
-@import '~modularscale-sass';
 
 /** Import theme styles */
 @import "helpers/functions";
