@@ -1,6 +1,7 @@
 .c-header {
   height: $header-height;
   background-color: $white;
+  border-bottom: 1px solid $lt-gray;
 }
 
 .c-header__inner {
