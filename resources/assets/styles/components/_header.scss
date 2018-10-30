@@ -14,6 +14,7 @@
 
   a {
     color: $dark-gray;
+    font-size: ms(-1);
 
     @include uppercase;
   }
