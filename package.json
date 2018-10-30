@@ -105,6 +105,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
+    "modularscale-sass": "^3.0.8",
     "normalize.css": "^8.0.0"
   }
 }
