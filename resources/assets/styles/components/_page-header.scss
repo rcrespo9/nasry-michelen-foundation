@@ -1,0 +1,22 @@
+.c-page-header--home {
+  height: ms(12);
+
+  @include page-header;
+}
+
+.c-page-header--single {
+  text-align: center;
+  height: ms(11);
+
+  @include page-header;
+}
+
+.c-page-header__wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.c-page-header__inner {
+  flex: 1;
+}

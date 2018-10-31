@@ -5,11 +5,7 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
     <main>
-      @if ( is_home() || is_front_page() )
-        @include('partials.homepage-header')
-      @else
-        @include('partials.page-header')
-      @endif
+      @include('partials.page-header')
       <div class="c-page-content">
         @yield('content')
       </div>

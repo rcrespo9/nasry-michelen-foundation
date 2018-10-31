@@ -17,6 +17,10 @@
 }
 
 /** Component mixins */
+@mixin page-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 @mixin button($size: small) {
   display: inline-block;
