@@ -12,6 +12,8 @@
 }
 
 .c-page-header__wrap {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   height: 100%;
@@ -19,4 +21,20 @@
 
 .c-page-header__inner {
   flex: 1;
+  max-width: ms(12);
+}
+
+.c-page-header__title,
+.c-page-header__blurb {
+  color: $white;
+}
+
+.c-page-header__title {
+  margin-bottom: ms(0);
+  font-size: ms(5);
+}
+
+.c-page-header__blurb {
+  margin-bottom: ms(2);
+  font-size: ms(1);
 }
