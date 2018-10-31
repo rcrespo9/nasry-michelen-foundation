@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/nasry-michelin-foundation",
-  "devUrl": "the-nasry-michelin-foundation.local",
+  "publicPath": "/wp-content/themes/nasry-michelen-foundation",
+  "devUrl": "the-nasry-michelen-foundation.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
