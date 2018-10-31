@@ -1,6 +1,10 @@
 .o-btn {
   background-color: $green;
 
+  &:hover {
+    background-color: $medium-green;
+  }
+
   @include button;
 }
 

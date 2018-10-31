@@ -1,14 +1,5 @@
-.c-page-header--home {
-  height: ms(12);
-
-  @include page-header;
-}
-
-.c-page-header--single {
-  text-align: center;
-  height: ms(11);
-
-  @include page-header;
+.c-page-header__inner {
+  flex: 1;
 }
 
 .c-page-header__wrap {
@@ -17,11 +8,6 @@
   display: flex;
   align-items: center;
   height: 100%;
-}
-
-.c-page-header__inner {
-  flex: 1;
-  max-width: ms(12);
 }
 
 .c-page-header__title,
@@ -37,4 +23,21 @@
 .c-page-header__blurb {
   margin-bottom: ms(2);
   font-size: ms(1);
+}
+
+.c-page-header--home {
+  height: ms(12);
+
+  @include page-header;
+
+  .c-page-header__inner {
+    max-width: ms(12);
+  }
+}
+
+.c-page-header--single {
+  text-align: center;
+  height: ms(11);
+
+  @include page-header;
 }
