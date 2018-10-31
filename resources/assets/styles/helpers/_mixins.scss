@@ -19,7 +19,8 @@
 /** Component mixins */
 
 @mixin button($size: small) {
-  padding: ms(-2) ms(0);
+  display: inline-block;
+  padding: ms(-1) ms(1);
   color: $white;
   font-size: map-get($button-sizes, $size);
 

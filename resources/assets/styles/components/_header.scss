@@ -12,15 +12,17 @@
 }
 
 .nav__list {
+  display: inline-block;
   list-style: none;
   margin: 0;
   padding: 0;
 
   .menu-item {
-    display: inline-block;
+    display: inherit;
+    margin-right: ms(2);
 
-    &:not(:first-of-type) {
-      margin-left: ms(4);
+    .sub-menu {
+      display: none; // for now
     }
   }
 
