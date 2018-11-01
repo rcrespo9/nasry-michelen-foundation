@@ -13,8 +13,7 @@
       @if ($blurb)
         <p class="c-page-header__blurb">{{$blurb}}</p>
       @endif
-      
-      @if ($isHome)
+      @if ($isHome && $buttonURL && $buttonText)
         <a class="o-btn" href="{{$buttonURL}}">{{$buttonText}}</a>
       @endif
     </div>

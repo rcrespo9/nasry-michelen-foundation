@@ -1,0 +1,25 @@
+.c-split-content-block,
+.c-split-content-block--reverse {
+  display: flex;
+}
+
+.c-split-content-block {
+  flex-direction: row;
+}
+
+.c-split-content-block--reverse {
+  flex-direction: row-reverse;
+}
+
+.c-split-content-block__img,
+.c-split-content-block__text {
+  flex-basis: 50%;
+}
+
+.c-split-content-block__text {
+  padding: ms(4) ms(3) 0;
+
+  p {
+    @include paragraph-copy;
+  }
+}

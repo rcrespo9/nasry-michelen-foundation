@@ -16,10 +16,20 @@
   font-weight: map-get($font-weight, bold);
 }
 
+@mixin paragraph-copy {
+  margin-bottom: ms(1);
+  line-height: ms(3, 0.875);
+}
+
 /** Animation mixins */
 
 @mixin hover-transition($property) {
   transition: $property 0.15s ease-in-out;
+}
+
+/** Layout mixins */
+@mixin page-section-spacing {
+  margin-bottom: ms(6);
 }
 
 /** Component mixins */

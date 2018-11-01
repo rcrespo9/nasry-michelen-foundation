@@ -25,6 +25,11 @@
   font-size: ms(1);
 }
 
+.c-page-header--home,
+.c-page-header--single {
+  @include page-section-spacing;
+}
+
 .c-page-header--home {
   height: ms(12);
 
@@ -36,8 +41,8 @@
 }
 
 .c-page-header--single {
-  text-align: center;
   height: ms(11);
+  text-align: center;
 
   @include page-header;
 }
