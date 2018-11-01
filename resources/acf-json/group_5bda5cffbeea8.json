@@ -1,36 +1,12 @@
 {
     "key": "group_5bda5cffbeea8",
-    "title": "Split Content Block",
+    "title": "Split Content Blocks",
     "fields": [
         {
-            "key": "field_5bda5d070ef75",
-            "label": "Image",
-            "name": "split_content_block_image",
-            "type": "image",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5bda64710b516",
-            "label": "Content",
-            "name": "split_content_block_content",
-            "type": "wysiwyg",
+            "key": "field_5bdafe3c84063",
+            "label": "Split Content Block",
+            "name": "split_content_block",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -39,57 +15,83 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5bda5df1356cb",
-            "label": "Split Content Block Direction",
-            "name": "split_content_block_direction",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Reverse blocks?",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5bda65170b517",
-            "label": "",
-            "name": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Split Content Block",
+            "sub_fields": [
+                {
+                    "key": "field_5bdafe5f84064",
+                    "label": "Image",
+                    "name": "split_content_block_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5bdafe7d84065",
+                    "label": "Content",
+                    "name": "split_content_block_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5bdafea784066",
+                    "label": "Direction",
+                    "name": "split_content_block_direction",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Reverse blocks?",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
         }
     ],
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "post_type",
                 "operator": "==",
-                "value": "front_page"
+                "value": "page"
             }
         ]
     ],
@@ -101,5 +103,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541040966
+    "modified": 1541081896
 }
