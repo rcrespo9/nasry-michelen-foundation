@@ -22,4 +22,8 @@
   p {
     @include paragraph-copy;
   }
+
+  p + .o-btn--primary {
+    margin-top: ms(2);
+  }
 }

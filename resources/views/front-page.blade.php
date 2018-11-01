@@ -19,23 +19,27 @@
       $blockImageID = $block['split_content_block_image'];
       $blockContent = $block['split_content_block_content'];
       $blockDirection = $block['split_content_block_direction'];
+      $blockBtnText = $block['split_content_block_button_text'];
+      $blockBtnUrl = $block['split_content_block_button_url'];
     @endphp
 
     @component('components.page-section')
-      @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection])
+      @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'button' => ['text' => $blockBtnText, 'url' => $blockBtnUrl]])
       @endcomponent
     @endcomponent
   @endif
-  @if ( have_rows('split_content_block') )
+  @if ( count(get_field('split_content_block')) > 1 )
     @php 
       $block = get_field('split_content_block')[1];
       $blockImageID = $block['split_content_block_image'];
       $blockContent = $block['split_content_block_content'];
       $blockDirection = $block['split_content_block_direction'];
+      $blockBtnText = $block['split_content_block_button_text'];
+      $blockBtnUrl = $block['split_content_block_button_url'];
     @endphp
 
     @component('components.page-section')
-      @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection])
+      @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'button' => ['text' => $blockBtnText, 'url' => $blockBtnUrl]])
       @endcomponent
     @endcomponent
   @endif

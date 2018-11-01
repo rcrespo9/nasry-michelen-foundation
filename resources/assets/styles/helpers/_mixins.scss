@@ -17,8 +17,11 @@
 }
 
 @mixin paragraph-copy {
-  margin-bottom: ms(1);
   line-height: ms(3, 0.875);
+
+  &:not(:last-of-type) {
+    margin-bottom: ms(0);
+  }
 }
 
 /** Animation mixins */

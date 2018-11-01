@@ -4,5 +4,8 @@
   </div>
   <div class="c-split-content-block__text">
     @php echo wp_kses_post($content); @endphp
+    @if ($button['text'])
+      <a class="o-btn--primary" href="{{$button['url']}}">{{$button['text']}}</a>
+    @endif
   </div>
 </div>

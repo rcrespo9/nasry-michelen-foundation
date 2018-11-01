@@ -14,7 +14,7 @@
         <p class="c-page-header__blurb">{{$blurb}}</p>
       @endif
       @if ($isHome && $buttonURL && $buttonText)
-        <a class="o-btn" href="{{$buttonURL}}">{{$buttonText}}</a>
+        <a class="o-btn--primary" href="{{$buttonURL}}">{{$buttonText}}</a>
       @endif
     </div>
   </div>
