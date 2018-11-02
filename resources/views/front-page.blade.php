@@ -1,6 +1,5 @@
 @php
   $blockquote = get_field('blockquote_text');
-  $contentBlockHeader = get_field('');
 @endphp
 
 @extends('layouts.app')

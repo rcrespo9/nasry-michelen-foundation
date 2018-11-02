@@ -1,3 +1,11 @@
 .c-page-section {
   @include page-section-spacing;
 }
+
+.c-page-section--gray {
+  background-color: $xlt-gray;
+}
+
+.c-page-section--vert-padding {
+  padding: ms(5) 0;
+}
