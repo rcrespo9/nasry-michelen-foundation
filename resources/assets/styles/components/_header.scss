@@ -11,6 +11,15 @@
   height: 100%;
 }
 
+.c-header__logo {
+  color: $dark-green;
+  font-size: ms(1);
+  max-width: ms(10);
+  line-height: ms(1, 0.875);
+
+  @include serif-font;
+}
+
 .nav__list {
   display: inline-block;
   list-style: none;
