@@ -1,0 +1,18 @@
+.c-donate-prompt {
+  padding: ms(5) 0;
+  color: $white;
+  background-color: $green;
+}
+
+.c-donate-prompt__inner {
+  grid-template-columns: ( column-width(10) 1fr );
+  align-items: center;
+
+  @include grid-row;
+}
+
+.c-donate-prompt__text {
+  font-size: ms(2);
+
+  @include serif-font(regular);
+}
