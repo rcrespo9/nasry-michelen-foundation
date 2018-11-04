@@ -25,42 +25,51 @@
   @include serif-font;
 }
 
+.c-header__nav ul {
+  margin: 0;
+}
+
 .nav__list {
   display: inline-block;
   list-style: none;
-  margin: 0;
   padding: 0;
 
   .menu-item {
+    position: relative;
     display: inherit;
     margin-right: ms(2);
 
-    .sub-menu {
-      display: none; // for now
-    }
-  }
+    > a {
+      position: relative;
+      z-index: 1;
+      color: $dark-gray;
+      font-size: ms(-1);
 
-  a {
-    position: relative;
-    z-index: 1;
-    color: $dark-gray;
-    font-size: ms(-1);
-
-    &:hover {
-      &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        bottom: ms(-8);
-        left: 0;
-        display: block;
-        width: 100%;
-        height: ms(11, 1%);
-        background-color: rgba($green, 0.4);
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          bottom: ms(-8);
+          left: 0;
+          display: block;
+          width: 100%;
+          height: ms(11, 1%);
+          background-color: rgba($green, 0.4);
+        }
       }
+
+      @include uppercase;
     }
 
-    @include uppercase;
+    .sub-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: ms(10);
+      padding: ms(2);
+      opacity: 0;
+      background-color: $white;
+    }
   }
 }
-
