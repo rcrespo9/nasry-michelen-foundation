@@ -27,7 +27,10 @@
       @endcomponent
     @endcomponent
   @endif
-  @if ( count(get_field('split_content_block')) > 1 )
+  @component('components.page-section', ['isSecondaryClass' => true, 'header' => 'Announcements'])
+    <p>Announcements go here</p>
+  @endcomponent
+  @if ( have_rows('split_content_block') && count(get_field('split_content_block')) > 1 )
     @php 
       $block = get_field('split_content_block')[1];
       $blockImageID = $block['split_content_block_image'];
@@ -42,6 +45,4 @@
       @endcomponent
     @endcomponent
   @endif
-
-  {!! get_the_posts_navigation() !!}
 @endsection
