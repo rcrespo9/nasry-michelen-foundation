@@ -31,11 +31,11 @@
   }
 
   &.category-scholarships {
-    @include post-card-custom-styles($money-green);
+    @include post-card-custom-styles($green);
   }
 
   &.category-news {
-    @include post-card-custom-styles($green);
+    @include post-card-custom-styles($cyan);
   }
 
   &.category-events {

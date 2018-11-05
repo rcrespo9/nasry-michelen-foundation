@@ -1,8 +1,8 @@
 .o-btn--primary {
-  background-color: $green;
+  background-color: $cyan;
 
   &:hover {
-    background-color: $medium-green;
+    background-color: $medium-cyan;
   }
 
   @include button;
@@ -13,7 +13,7 @@
   border: 1px solid $white;
 
   &:hover {
-    color: $green;
+    color: $cyan;
     background-color: $white;
   }
 
