@@ -72,6 +72,12 @@
   .c-post-card__more {
     color: $color;
   }
+
+  &:hover {
+    .c-post-card__title {
+      color: $color;
+    }
+  }
 }
 
 /** Object mixins */
@@ -83,7 +89,7 @@
   font-size: ms(-1);
   text-align: center;
 
-  @include hover-transition(background-color);
+  @include hover-transition(all);
 
   &.o-btn--medium {
     font-size: ms(0);

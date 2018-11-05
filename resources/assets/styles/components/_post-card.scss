@@ -63,6 +63,8 @@
 .c-post-card__title {
   color: $dark-gray;
   font-size: ms(1);
+
+  @include hover-transition(color);
 }
 
 .c-post-card__excerpt p {

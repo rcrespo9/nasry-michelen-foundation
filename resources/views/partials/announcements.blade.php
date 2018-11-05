@@ -20,3 +20,4 @@
     </div>
   </div>
 </section>
+@php wp_reset_postdata(); @endphp
