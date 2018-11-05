@@ -1,0 +1,80 @@
+.c-post-card__link {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: $white;
+}
+
+.c-post-card__img {
+  position: relative;
+  min-height: ms(8);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.c-post-card__tag {
+  position: absolute;
+  z-index: 1;
+  top: ms(1);
+  left: ms(1);
+  padding: ms(-3) ms(-1);
+  color: $white;
+  font-size: ms(-2);
+  text-align: center;
+
+  @include uppercase;
+}
+
+.c-post-card {
+  &.category-press {
+    @include post-card-custom-styles($blue);
+  }
+
+  &.category-scholarships {
+    @include post-card-custom-styles($money-green);
+  }
+
+  &.category-news {
+    @include post-card-custom-styles($green);
+  }
+
+  &.category-events {
+    @include post-card-custom-styles($red);
+  }
+}
+
+.c-post-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: ms(0);
+}
+
+.c-post-card__date {
+  display: block;
+  margin-bottom: ms(-2);
+  color: $gray;
+  font-size: ms(-2);
+
+  @include uppercase;
+}
+
+.c-post-card__title {
+  color: $dark-gray;
+  font-size: ms(1);
+}
+
+.c-post-card__excerpt p {
+  color: $gray;
+  font-size: ms(-1);
+}
+
+.c-post-card__more {
+  font-size: ms(-1);
+}
+
+.c-post-card__header,
+.c-post-card__excerpt {
+  margin-bottom: ms(-1);
+}

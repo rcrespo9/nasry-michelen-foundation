@@ -27,9 +27,7 @@
       @endcomponent
     @endcomponent
   @endif
-  @component('components.page-section', ['isSecondaryClass' => true, 'header' => 'Announcements'])
-    <p>Announcements go here</p>
-  @endcomponent
+  @include('partials.announcements')
   @if ( have_rows('split_content_block') && count(get_field('split_content_block')) > 1 )
     @php 
       $block = get_field('split_content_block')[1];

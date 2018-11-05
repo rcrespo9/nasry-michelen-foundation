@@ -62,6 +62,18 @@
   }
 }
 
+@mixin post-card-custom-styles($color) {
+  border-bottom: 5px solid $color;
+
+  .c-post-card__tag {
+    background-color: $color;
+  }
+
+  .c-post-card__more {
+    color: $color;
+  }
+}
+
 /** Object mixins */
 
 @mixin button {
