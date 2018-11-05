@@ -17,5 +17,5 @@
     background-color: $white;
   }
 
-  @include button;
+  @include button(regular);
 }

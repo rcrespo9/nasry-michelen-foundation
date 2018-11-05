@@ -57,7 +57,7 @@
   color: $gray;
   font-size: ms(-2);
 
-  @include uppercase;
+  @include uppercase(semi-bold);
 }
 
 .c-post-card__title {
