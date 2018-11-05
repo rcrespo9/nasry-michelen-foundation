@@ -5,7 +5,7 @@
 }
 
 .c-donate-prompt__inner {
-  grid-template-columns: ( column-width(10) 1fr );
+  grid-template-columns: (1fr column-width(2));
   align-items: center;
 
   @include grid-row;

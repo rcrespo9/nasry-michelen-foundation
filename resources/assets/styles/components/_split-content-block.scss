@@ -13,7 +13,7 @@
 
 .c-split-content-block__img,
 .c-split-content-block__text {
-  flex-basis: 50%;
+  flex-basis: column-width(6);
 }
 
 .c-split-content-block__text {
