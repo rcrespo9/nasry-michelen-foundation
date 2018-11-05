@@ -35,9 +35,9 @@
   margin-bottom: ms(6);
 }
 
-@mixin grid-row {
+@mixin grid-row($gap: ms(2)) {
   display: grid;
-  column-gap: ms(2);
+  column-gap: $gap;
 }
 
 /** Component mixins */

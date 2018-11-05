@@ -9,5 +9,5 @@
 .l-announcements {
   grid-template-columns: repeat(3, 1fr);
 
-  @include grid-row;
+  @include grid-row(ms(6));
 }
