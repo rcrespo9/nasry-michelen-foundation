@@ -1,5 +1,13 @@
 .c-page-section {
   @include page-section-spacing;
+
+  h2 {
+    margin-bottom: ms(1);
+    color: $dark-cyan;
+    font-size: ms(3);
+
+    @include serif-font;
+  }
 }
 
 .c-page-section--secondary {

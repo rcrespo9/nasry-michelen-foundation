@@ -1,22 +1,8 @@
-h2,
-h3 {
-  margin: 0;
-  line-height: 1;
-
-  @include serif-font;
-}
-
 h1,
 h2,
 h3,
 p {
   margin: 0;
-}
-
-h2 {
-  margin-bottom: ms(1);
-  color: $dark-cyan;
-  font-size: ms(3);
 }
 
 a {

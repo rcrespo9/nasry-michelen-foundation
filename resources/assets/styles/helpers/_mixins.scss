@@ -24,6 +24,16 @@
   }
 }
 
+@mixin footer-header {
+  margin-bottom: ms(-3);
+  font-size: ms(0);
+  font-weight: map-get($font-weight, semi-bold);
+}
+
+@mixin footer-copy {
+  font-size: ms(-1);
+}
+
 /** Animation mixins */
 
 @mixin hover-transition($property) {
