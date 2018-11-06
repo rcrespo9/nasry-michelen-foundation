@@ -5,7 +5,9 @@
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav__list', 'container' => '']) !!}
       @endif
-      <a href="#" class="o-btn--primary">Donate</a>
+      <div class="nav__donate">
+        <a href="#" class="o-btn--primary">Donate</a>
+      </div>
     </nav>
   </div>
 </header>

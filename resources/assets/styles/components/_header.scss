@@ -25,51 +25,53 @@
   @include serif-font;
 }
 
-.c-header__nav ul {
-  margin: 0;
+.c-header__nav {
+  display: flex;
+  height: inherit;
+
+  ul {
+    margin: 0;
+  }
 }
 
 .nav__list {
-  display: inline-block;
+  display: flex;
   list-style: none;
   padding: 0;
 
   .menu-item {
     position: relative;
     display: inherit;
+    align-items: center;
     margin-right: ms(2);
-
-    > a {
-      position: relative;
-      z-index: 1;
-      color: $dark-gray;
-      font-size: ms(-1);
-
-      &:hover {
-        &::after {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          bottom: ms(-8);
-          left: 0;
-          display: block;
-          width: 100%;
-          height: ms(11, 1%);
-          background-color: rgba($cyan, 0.4);
-        }
-      }
-
-      @include uppercase;
-    }
 
     .sub-menu {
       position: absolute;
-      top: 0;
+      top: calc(100% + 1px);
       left: 0;
       min-width: ms(10);
       padding: ms(2);
       opacity: 0;
       background-color: $white;
+
+      @include hover-transition(opacity);
+    }
+
+    &:hover {
+      .sub-menu {
+        opacity: 1;
+      }
+    }
+
+    > a {
+      color: $dark-gray;
+      font-size: ms(-1);
+
+      @include uppercase;
     }
   }
+}
+
+.nav__donate {
+  align-self: center;
 }
