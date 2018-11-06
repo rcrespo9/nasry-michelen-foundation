@@ -10,19 +10,21 @@
   height: 100%;
 }
 
-.c-page-header__title,
-.c-page-header__blurb {
-  color: $white;
-}
-
 .c-page-header__title {
   margin-bottom: ms(0);
-  font-size: ms(5);
+  font-size: ms(0);
+  color: $lt-cyan;
+
+  @include uppercase;
 }
 
 .c-page-header__blurb {
+  max-width: ms(13);
   margin-bottom: ms(2);
-  font-size: ms(1);
+  color: $white;
+  font-size: ms(3);
+
+  @include serif-font;
 }
 
 .c-page-header--home,
@@ -34,10 +36,6 @@
   height: ms(12);
 
   @include page-header;
-
-  .c-page-header__inner {
-    max-width: ms(12);
-  }
 }
 
 .c-page-header--single {

@@ -12,7 +12,7 @@
 
 @mixin uppercase($weight: medium) {
   text-transform: uppercase;
-  letter-spacing: ms(-11);
+  letter-spacing: ms(-9);
   font-weight: map-get($font-weight, $weight);
 }
 
