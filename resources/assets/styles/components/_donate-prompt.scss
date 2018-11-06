@@ -1,11 +1,11 @@
 .c-donate-prompt {
-  padding: ms(5) 0;
+  padding: ms(4) 0;
   color: $white;
   background-color: $cyan;
 }
 
 .c-donate-prompt__inner {
-  grid-template-columns: (1fr column-width(2));
+  grid-template-columns: 1fr column-width(2);
   align-items: center;
 
   @include grid-row;
