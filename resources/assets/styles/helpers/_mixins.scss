@@ -44,6 +44,8 @@
 
 @mixin page-header {
   position: relative;
+  display: flex;
+  align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
 

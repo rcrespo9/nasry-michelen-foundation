@@ -1,13 +1,6 @@
-.c-page-header__inner {
-  flex: 1;
-}
-
 .c-page-header__wrap {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  height: 100%;
 }
 
 .c-page-header__title {
@@ -33,13 +26,13 @@
 }
 
 .c-page-header--home {
-  height: ms(12);
+  min-height: calc(90vh - #{$header-height});
 
   @include page-header;
 }
 
 .c-page-header--single {
-  height: ms(11);
+  min-height: calc(60vh - #{$header-height});
   text-align: center;
 
   @include page-header;
