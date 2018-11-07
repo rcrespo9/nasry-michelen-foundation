@@ -29,7 +29,7 @@
   font-size: ms(-1);
 }
 
-@mixin link($color: inherit, $hover-color: $color, $is-uppercase: false) {
+@mixin link($color: inherit, $hover-color: $color) {
   position: relative;
   color: $color;
 
@@ -37,12 +37,6 @@
     color: $hover-color;
     text-decoration: underline;
   }
-
-  @if $is-uppercase {
-    @include uppercase;
-  }
-
-  @include hover-transition(color);
 }
 
 @mixin paragraph-copy {
