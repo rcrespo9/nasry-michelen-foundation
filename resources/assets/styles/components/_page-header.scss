@@ -5,19 +5,15 @@
 }
 
 .c-page-header__title {
-  margin-bottom: ms(0);
-  font-size: ms(0);
+  margin-bottom: ms(-1);
+  font-size: ms(5);
 
-  @include uppercase;
+  @include serif-font($line-height: ms(0));
 }
 
 .c-page-header__blurb {
-  max-width: ms(14);
-  margin-bottom: ms(2);
-  color: $white;
-  font-size: ms(4);
-
-  @include serif-font;
+  margin-bottom: ms(1);
+  font-size: ms(1);
 }
 
 .c-page-header--home,
@@ -27,6 +23,10 @@
 
 .c-page-header--home {
   min-height: calc(90vh - #{$header-height});
+
+  .c-page-header__content {
+    max-width: ms(12);
+  }
 
   @include page-header;
 }

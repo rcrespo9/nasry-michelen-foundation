@@ -19,10 +19,7 @@
 .c-header__logo {
   color: $dark-cyan;
   font-size: ms(1);
-  max-width: ms(10);
-  line-height: ms(1, 0.875);
-
-  @include serif-font;
+  font-weight: map-get($font-weight, bold);
 }
 
 .c-header__nav {

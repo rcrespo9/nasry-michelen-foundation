@@ -8,12 +8,14 @@
 
 <header class="{{$isHome ? 'c-page-header--home' : 'c-page-header--single'}}" style="{{ $featuredImage ? 'background-image:url(' . $featuredImage .');' : '' }}">
   <div class="c-page-header__wrap l-wrap">
-    <h1 class="c-page-header__title">{{ App::title() }}</h1>
-    @if ($blurb)
-      <p class="c-page-header__blurb">{{$blurb}}</p>
-    @endif
-    @if ($isHome && $buttonURL && $buttonText)
-      <a class="o-btn--primary" href="{{$buttonURL}}">{{$buttonText}}</a>
-    @endif
+    <div class="c-page-header__content">
+      <h1 class="c-page-header__title">{{ App::title() }}</h1>
+      @if ($blurb)
+        <p class="c-page-header__blurb">{{$blurb}}</p>
+      @endif
+      @if ($isHome && $buttonURL && $buttonText)
+        <a class="o-btn--primary" href="{{$buttonURL}}">{{$buttonText}}</a>
+      @endif
+    </div>
   </div>
 </header>
