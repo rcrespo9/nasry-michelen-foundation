@@ -10,12 +10,12 @@
   font-size: ms(-1);
 
   @include sans-serif-font;
-  @include uppercase(semi-bold);
+  @include uppercase(bold);
 }
 
 .c-homepage-header__lead {
   max-width: ms(13);
-  margin-bottom: ms(0);
+  margin-bottom: ms(1);
   font-size: ms(4);
 
   @include serif-font($line-height: ms(0));
@@ -23,7 +23,7 @@
 
 .c-homepage-header__blurb {
   max-width: ms(12);
-  margin-bottom: ms(1);
+  margin-bottom: ms(2);
   font-size: ms(0);
   font-weight: map-get($font-weight, light);
 }

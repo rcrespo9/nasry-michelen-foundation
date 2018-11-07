@@ -5,7 +5,11 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
     <main class="c-page-container">
-      @include('partials.homepage-header')
+      @if (is_front_page())
+        @include('partials.homepage-header')
+      @else
+        @include('partials.page-header')
+      @endif
       @yield('content')
     </main>
     @php do_action('get_footer') @endphp
