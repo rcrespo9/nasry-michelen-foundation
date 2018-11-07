@@ -108,7 +108,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(16, 5, 0, 0.4) 0%, rgba(16, 5, 0, 0.2) 100%);
+    background-color: rgba($black, 0.125);
   }
 
   .l-wrap {
@@ -139,20 +139,11 @@
 
 @mixin button($weight: semi-bold) {
   display: inline-block;
-  padding: ms(-2) ms(1);
+  padding: ms(-2, $thread: a) ms(2, $thread: a);
   color: $white;
-  font-size: ms(-1);
+  font-size: ms(-1, $thread: a);
   text-align: center;
+  font-weight: map-get($font-weight, semi-bold);
 
   @include hover-transition(all);
-
-  &.o-btn--medium {
-    font-size: ms(0);
-  }
-
-  &.o-btn--large {
-    font-size: ms(1);
-  }
-
-  @include uppercase($weight);
 }

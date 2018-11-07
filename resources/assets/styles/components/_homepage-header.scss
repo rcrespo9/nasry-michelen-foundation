@@ -6,24 +6,25 @@
 }
 
 .c-homepage-header__title {
-  margin-bottom: ms(0);
-  font-size: ms(0);
+  margin-bottom: ms(-2, $thread: a);
+  font-size: ms(-1, $thread: a);
 
   @include sans-serif-font;
   @include uppercase(semi-bold);
 }
 
 .c-homepage-header__lead {
-  max-width: ms(14);
-  margin-bottom: ms(0);
-  font-size: ms(5);
+  max-width: ms(16, $thread: a);
+  margin-bottom: ms(-1, $thread: a);
+  font-size: ms(6, $thread: a);
 
-  @include serif-font($line-height: ms(0));
+  @include serif-font($line-height: ms(1, 0.875rem, $thread: a));
 }
 
 .c-homepage-header__blurb {
-  max-width: ms(13);
-  margin-bottom: ms(2);
-  font-size: ms(1);
+  max-width: ms(15, $thread: a);
+  margin-bottom: ms(3, $thread: a);
+  font-size: ms(1, $thread: a);
   font-weight: map-get($font-weight, light);
+  line-height: strip-unit(ms(2, $thread: a));
 }
