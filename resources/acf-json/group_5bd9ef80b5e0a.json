@@ -1,26 +1,7 @@
 {
     "key": "group_5bd9ef80b5e0a",
-    "title": "Page Header",
+    "title": "Page Header Blurb",
     "fields": [
-        {
-            "key": "field_5be1f57e2e22c",
-            "label": "Title",
-            "name": "page_header_title",
-            "type": "text",
-            "instructions": "Will default to page title if left blank.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
         {
             "key": "field_5bd9ef99b082f",
             "label": "Blurb",
@@ -58,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541535463
+    "modified": 1541543194
 }

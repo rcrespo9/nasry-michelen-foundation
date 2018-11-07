@@ -53,17 +53,18 @@
 
 .c-post-card__date {
   display: block;
-  margin-bottom: ms(-2);
+  margin-bottom: ms(-4);
   color: $gray;
   font-size: ms(-2);
 
-  @include uppercase(semi-bold);
+  @include uppercase(bold);
 }
 
 .c-post-card__title {
   color: $dark-gray;
   font-size: ms(1);
 
+  @include serif-font;
   @include hover-transition(color);
 }
 

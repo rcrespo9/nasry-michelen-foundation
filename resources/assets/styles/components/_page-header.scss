@@ -1,21 +1,21 @@
 .c-page-header__wrap {
   position: relative;
   z-index: 2;
+  color: $white;
 }
 
 .c-page-header__title {
   margin-bottom: ms(0);
   font-size: ms(0);
-  color: $lt-cyan;
 
   @include uppercase;
 }
 
 .c-page-header__blurb {
-  max-width: ms(13);
+  max-width: ms(14);
   margin-bottom: ms(2);
   color: $white;
-  font-size: ms(3);
+  font-size: ms(4);
 
   @include serif-font;
 }
