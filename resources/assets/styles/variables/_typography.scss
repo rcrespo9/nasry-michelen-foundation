@@ -1,6 +1,9 @@
 $modularscale: (
   base: 1rem,
-  ratio: $fourth
+  ratio: $fourth,
+  a: (
+    ratio: $major-third
+  )
 );
 
 $font-weight: (

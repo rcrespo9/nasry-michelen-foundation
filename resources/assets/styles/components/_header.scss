@@ -39,31 +39,55 @@
   > .menu-item {
     position: relative;
     display: inherit;
+    padding: 0 ms(0);
 
     > a {
+      position: relative;
       display: flex;
       align-items: center;
-      padding: 0 ms(0);
       color: $dark-gray;
       font-size: ms(-1);
 
       @include uppercase;
+      @include hover-transition(color);
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: $medium-cyan;
+        opacity: 0;
+
+        @include hover-transition(opacity);
+      }
     }
 
     .sub-menu {
       position: absolute;
       top: calc(100% + 1px);
-      left: 0;
+      left: ms(0);
       min-width: ms(10);
       padding: ms(2);
       opacity: 0;
       background-color: $white;
       pointer-events: none;
+      list-style: none;
 
       @include hover-transition(opacity);
     }
 
     &:hover {
+      > a {
+        color: $medium-cyan;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+
       .sub-menu {
         opacity: 1;
         pointer-events: auto;

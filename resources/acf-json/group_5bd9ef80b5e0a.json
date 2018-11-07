@@ -1,14 +1,73 @@
 {
     "key": "group_5bd9ef80b5e0a",
-    "title": "Page Header Blurb",
+    "title": "Homepage Header",
     "fields": [
+        {
+            "key": "field_5be350647debb",
+            "label": "Lead",
+            "name": "homepage_header_lead",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
         {
             "key": "field_5bd9ef99b082f",
             "label": "Blurb",
-            "name": "page_header_blurb",
+            "name": "homepage_header_blurb",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5be350947debc",
+            "label": "CTA URL",
+            "name": "homepage_header_cta_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5be350ca7debd",
+            "label": "CTA Text",
+            "name": "homepage_header_cta_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -25,9 +84,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "page"
+                "value": "25"
             }
         ]
     ],
@@ -39,5 +98,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541543194
+    "modified": 1541625466
 }

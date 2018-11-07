@@ -1,18 +1,7 @@
-@php
-  $blockquote = get_field('blockquote_text');
-@endphp
-
 @extends('layouts.app')
 
 @section('content')
   <div class="c-page-content--home">  
-    @if ($blockquote)
-      @component('components.page-section')
-        @component('components.blockquote')
-          {{ $blockquote }}
-        @endcomponent
-      @endcomponent
-    @endif
     @if ( have_rows('split_content_block') )
       @php 
         $block = get_field('split_content_block')[0];

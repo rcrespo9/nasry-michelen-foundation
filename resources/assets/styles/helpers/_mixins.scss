@@ -110,6 +110,11 @@
     height: 100%;
     background: linear-gradient(135deg, rgba(16, 5, 0, 0.4) 0%, rgba(16, 5, 0, 0.2) 100%);
   }
+
+  .l-wrap {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 @mixin post-card-custom-styles($color) {
