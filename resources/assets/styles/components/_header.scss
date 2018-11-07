@@ -39,7 +39,16 @@
   > .menu-item {
     position: relative;
     display: inherit;
-    margin-right: ms(2);
+
+    > a {
+      display: flex;
+      align-items: center;
+      padding: 0 ms(0);
+      color: $dark-gray;
+      font-size: ms(-1);
+
+      @include uppercase;
+    }
 
     .sub-menu {
       position: absolute;
@@ -60,18 +69,10 @@
         pointer-events: auto;
       }
     }
-
-    > a {
-      display: flex;
-      align-items: center;
-      color: $dark-gray;
-      font-size: ms(-1);
-
-      @include uppercase;
-    }
   }
 }
 
 .nav__donate {
+  margin-left: ms(0);
   align-self: center;
 }
