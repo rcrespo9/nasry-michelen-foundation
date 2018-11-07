@@ -3,7 +3,7 @@
   color: $white;
 
   a {
-    color: inherit;
+    @include link($color: $white);
   }
 
   ul {
@@ -29,8 +29,6 @@
   @include grid-row;
 
   > .menu-item > a {
-    display: block;
-
     @include footer-header;
   }
 

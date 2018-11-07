@@ -19,14 +19,6 @@
   font-weight: map-get($font-weight, $weight);
 }
 
-@mixin paragraph-copy {
-  line-height: ms(2, 1);
-
-  &:not(:last-of-type) {
-    margin-bottom: ms(0);
-  }
-}
-
 @mixin footer-header {
   margin-bottom: ms(-5);
   font-size: ms(0);
@@ -35,6 +27,34 @@
 
 @mixin footer-copy {
   font-size: ms(-1);
+}
+
+@mixin link($color: inherit, $hover-color: $color, $is-uppercase: false) {
+  position: relative;
+  color: $color;
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+
+  @if $is-uppercase {
+    @include uppercase;
+  }
+
+  @include hover-transition(color);
+}
+
+@mixin paragraph-copy {
+  line-height: ms(2, 1);
+
+  &:not(:last-of-type) {
+    margin-bottom: ms(0);
+  }
+
+  a {
+    @include link($color: $dark-cyan);
+  }
 }
 
 /** Animation mixins */
