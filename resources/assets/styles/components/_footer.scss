@@ -3,7 +3,7 @@
   color: $white;
 
   a {
-    @include link($color: $white);
+    @include link($color: $white, $hover-color: $lt-cyan, $has-border: false);
   }
 
   ul {

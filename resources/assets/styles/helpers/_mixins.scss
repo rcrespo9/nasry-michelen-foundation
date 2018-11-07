@@ -29,14 +29,20 @@
   font-size: ms(-1);
 }
 
-@mixin link($color: inherit, $hover-color: $color) {
+@mixin link($color: inherit, $hover-color: $color, $has-border: true) {
   position: relative;
   color: $color;
 
+  @if $has-border {
+    border-bottom: 2px solid;
+    border-color: $hover-color;
+  }
+
   &:hover {
     color: $hover-color;
-    text-decoration: underline;
   }
+
+  @include hover-transition(color);
 }
 
 @mixin paragraph-copy {
@@ -47,7 +53,7 @@
   }
 
   a {
-    @include link($color: $dark-cyan);
+    @include link($hover-color: $cyan);
   }
 }
 
