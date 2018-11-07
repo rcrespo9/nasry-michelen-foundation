@@ -17,11 +17,6 @@
   line-height: strip-unit(ms(2, 0.875));
 }
 
-.c-page-header--home,
-.c-page-header--single {
-  @include page-section-spacing;
-}
-
 .c-page-header--home {
   min-height: calc(90vh - #{$header-height});
 

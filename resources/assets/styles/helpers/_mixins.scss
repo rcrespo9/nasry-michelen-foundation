@@ -65,12 +65,27 @@
 
 /** Layout mixins */
 @mixin page-section-spacing {
-  margin-bottom: ms(6);
+  margin-bottom: ms(5);
 }
 
 @mixin grid-row($gap: ms(2)) {
   display: grid;
   column-gap: $gap;
+}
+
+@mixin container($size) {
+  @if $size == 'large' {
+    max-width: ms(15);
+  }
+
+  @else if $size == 'small' {
+    max-width: ms(13);
+  }
+
+  width: 100%;
+  margin: 0 auto;
+  padding-left: ms(2);
+  padding-right: ms(2);
 }
 
 /** Component mixins */

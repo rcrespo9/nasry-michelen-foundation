@@ -1,9 +1,5 @@
 .l-wrap {
-  margin: 0 auto;
-  max-width: ms(15);
-  width: 100%;
-  padding-left: ms(2);
-  padding-right: ms(2);
+  @include container('large');
 }
 
 .l-announcements {

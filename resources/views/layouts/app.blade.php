@@ -6,9 +6,7 @@
     @include('partials.header')
     <main class="c-page-container">
       @include('partials.page-header')
-      <div class="c-page-content">
-        @yield('content')
-      </div>
+      @yield('content')
     </main>
     @php do_action('get_footer') @endphp
     @include('partials.footer')

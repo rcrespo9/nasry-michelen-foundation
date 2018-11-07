@@ -1,0 +1,14 @@
+.c-page-content--home {
+  padding-top: ms(5);
+}
+
+.c-page-content--single {
+  padding-top: ms(4);
+  padding-bottom: ms(4);
+
+  @include container('small');
+
+  p {
+    @include paragraph-copy;
+  }
+}
