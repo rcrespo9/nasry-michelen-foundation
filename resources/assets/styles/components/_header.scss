@@ -44,6 +44,8 @@
   .menu-item a {
     font-size: ms(0, 0.875rem);
     font-weight: map-get($font-weight, semi-bold);
+
+    @include hover-transition(color);
   }
 
   > .menu-item {
@@ -54,8 +56,6 @@
       padding: 0 ms(0);
       align-items: center;
       color: $dark-gray;
-
-      @include hover-transition(color);
 
       &::after {
         content: "";
@@ -74,14 +74,16 @@
 
     .sub-menu {
       position: absolute;
-      top: calc(100% + 1px);
+      top: 100%;
       left: ms(0);
       min-width: ms(9);
-      padding: ms(0) ms(1);
+      padding: ms(-1) ms(0);
       opacity: 0;
       background-color: $white;
       pointer-events: none;
-      box-shadow: 0 3px 6px rgba($black, 0.16), 0 3px 6px rgba($black, 0.23);
+      border: 1px solid $lt-gray;
+      box-shadow: 0 1px 1px 0 rgba($black, 0.05);
+      transform: translateY(9%);
 
       a {
         display: block;
@@ -89,15 +91,16 @@
         color: $md-gray;
       }
 
-      @include hover-transition(opacity);
+      @include hover-transition(all);
     }
   }
 
-  > .menu-item:hover {
-    > a {
-      color: $medium-cyan;
-    }
+  > .menu-item:hover > a,
+  .sub-menu .menu-item a:hover {
+    color: $medium-cyan;
+  }
 
+  > .menu-item:hover {
     > a::after {
       opacity: 1;
       transform: translateX(-50%) translateY(0);
@@ -106,6 +109,7 @@
     .sub-menu {
       opacity: 1;
       pointer-events: auto;
+      transform: translateY(0);
     }
   }
 }

@@ -147,7 +147,7 @@
 @mixin button($weight: semi-bold) {
   display: inline-block;
   padding: ms(-2) ms(2);
-  border-radius: 3px;
+  border-radius: $global-radius;
   color: $white;
   font-size: ms(0, 0.875rem);
   font-weight: map-get($font-weight, $weight);
