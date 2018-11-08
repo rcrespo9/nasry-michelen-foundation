@@ -57,6 +57,13 @@
   }
 }
 
+@mixin page-section-header {
+  color: $dark-cyan;
+  font-size: ms(3);
+
+  @include serif-font;
+}
+
 /** Animation mixins */
 
 @mixin hover-transition($property) {

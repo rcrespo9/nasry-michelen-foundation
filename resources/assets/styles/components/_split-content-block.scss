@@ -19,6 +19,12 @@
 .c-split-content-block__text {
   padding: ms(4) ms(3) 0;
 
+  h2 {
+    margin-bottom: ms(0);
+
+    @include page-section-header;
+  }
+
   p {
     @include paragraph-copy;
   }
