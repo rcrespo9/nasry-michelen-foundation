@@ -22,8 +22,8 @@
   p {
     @include paragraph-copy;
   }
+}
 
-  p + .o-cta-link {
-    margin-top: ms(1);
-  }
+.c-split-content-block__cta {
+  margin-top: ms(1);
 }

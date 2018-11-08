@@ -1,9 +1,3 @@
 .l-wrap {
   @include container('large');
 }
-
-.l-announcements {
-  grid-template-columns: repeat(3, 1fr);
-
-  @include grid-row(ms(6));
-}

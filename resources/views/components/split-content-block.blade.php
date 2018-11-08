@@ -5,7 +5,7 @@
   <div class="c-split-content-block__text">
     @php echo wp_kses_post($content); @endphp
     @if ($cta['text'])
-      @component('components.cta-link', ['url' => $cta['url']])
+      @component('components.cta-link', ['url' => $cta['url'], 'class' => 'c-split-content-block__cta'])
         {{$cta['text']}}
       @endcomponent
     @endif
