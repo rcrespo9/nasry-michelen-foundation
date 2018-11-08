@@ -24,9 +24,9 @@
 }
 
 .c-header__logo {
-  color: $md-gray;
-  font-size: ms(1);
-  font-weight: map-get($font-weight, bold);
+  color: $dark-cyan;
+  font-size: ms(0);
+  font-weight: map-get($font-weight, semi-bold);
 }
 
 .c-header__nav {
