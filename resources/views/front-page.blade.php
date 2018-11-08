@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="c-page-content--home">  
+  <div class="c-homepage-content">  
     @if ( have_rows('split_content_block') )
       @php 
         $block = get_field('split_content_block')[0];

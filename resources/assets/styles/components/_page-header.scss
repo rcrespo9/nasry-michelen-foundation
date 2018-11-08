@@ -1,6 +1,22 @@
-.c-page-header--single {
+.c-page-header {
   min-height: calc(60vh - #{$header-height});
   text-align: center;
+  color: $white;
 
   @include page-header;
+}
+
+.c-page-header__parent-title {
+  display: block;
+  margin-bottom: ms(0);
+  font-size: ms(0);
+  font-style: italic;
+
+  @include serif-font(regular);
+}
+
+.c-page-header__title {
+  font-size: ms(3);
+
+  @include serif-font;
 }
