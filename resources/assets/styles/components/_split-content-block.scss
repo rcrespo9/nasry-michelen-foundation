@@ -23,7 +23,7 @@
     @include paragraph-copy;
   }
 
-  p + .o-btn--primary {
-    margin-top: ms(2);
+  p + .o-cta-link {
+    margin-top: ms(1);
   }
 }

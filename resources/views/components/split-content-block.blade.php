@@ -4,8 +4,10 @@
   </div>
   <div class="c-split-content-block__text">
     @php echo wp_kses_post($content); @endphp
-    @if ($button['text'])
-      <a class="o-btn--primary" href="{{$button['url']}}">{{$button['text']}}</a>
+    @if ($cta['text'])
+      @component('components.cta-link', ['url' => $cta['url']])
+        {{$cta['text']}}
+      @endcomponent
     @endif
   </div>
 </div>

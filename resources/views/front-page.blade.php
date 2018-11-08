@@ -8,12 +8,12 @@
         $blockImageID = $block['split_content_block_image'];
         $blockContent = $block['split_content_block_content'];
         $blockDirection = $block['split_content_block_direction'];
-        $blockBtnText = $block['split_content_block_button_text'];
-        $blockBtnUrl = $block['split_content_block_button_url'];
+        $blockCTAText = $block['split_content_block_cta_text'];
+        $blockCTAUrl = $block['split_content_block_cta_url'];
       @endphp
 
       @component('components.page-section')
-        @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'button' => ['text' => $blockBtnText, 'url' => $blockBtnUrl]])
+        @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'cta' => ['text' => $blockCTAText, 'url' => $blockCTAUrl]])
         @endcomponent
       @endcomponent
     @endif
@@ -24,12 +24,12 @@
         $blockImageID = $block['split_content_block_image'];
         $blockContent = $block['split_content_block_content'];
         $blockDirection = $block['split_content_block_direction'];
-        $blockBtnText = $block['split_content_block_button_text'];
-        $blockBtnUrl = $block['split_content_block_button_url'];
+        $blockCTAText = $block['split_content_block_cta_text'];
+        $blockCTAUrl = $block['split_content_block_cta_url'];
       @endphp
 
       @component('components.page-section')
-        @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'button' => ['text' => $blockBtnText, 'url' => $blockBtnUrl]])
+        @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'cta' => ['text' => $blockCTAText, 'url' => $blockCTAUrl]])
         @endcomponent
       @endcomponent
     @endif

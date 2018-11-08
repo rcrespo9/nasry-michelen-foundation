@@ -34,7 +34,7 @@
   color: $color;
 
   @if $has-border {
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     border-color: $hover-color;
   }
 
@@ -53,7 +53,7 @@
   }
 
   a {
-    @include link($hover-color: $cyan);
+    @include link($color: $dark-gray, $hover-color: $cyan);
   }
 }
 
@@ -139,11 +139,12 @@
 
 @mixin button($weight: semi-bold) {
   display: inline-block;
-  padding: ms(-2, $thread: a) ms(2, $thread: a);
+  padding: ms(-1) ms(1);
   color: $white;
-  font-size: ms(-1, $thread: a);
+  font-size: ms(-1);
   text-align: center;
   font-weight: map-get($font-weight, semi-bold);
 
+  @include uppercase;
   @include hover-transition(all);
 }

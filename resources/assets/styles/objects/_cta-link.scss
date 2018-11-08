@@ -1,0 +1,26 @@
+.o-cta-link__text,
+.o-cta-link__arrow {
+  display: inline-block;
+}
+
+.o-cta-link__arrow {
+  width: ms(-1);
+  height: ms(-1);
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.o-cta-link {
+  display: inline-block;
+  font-weight: map-get($font-weight, semi-bold);
+
+  @include link($color: $dark-gray, $hover-color: $cyan);
+
+  &:hover .o-cta-link__arrow {
+    animation: arrowPoint 0.3s linear forwards;
+  }
+}
+
+.o-cta-link__text {
+  margin-right: ms(-2);
+}
