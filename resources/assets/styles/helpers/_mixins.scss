@@ -86,7 +86,7 @@
   }
 
   @else if $size == 'small' {
-    max-width: ms(13);
+    max-width: ms(13, 0.875rem);
   }
 
   width: 100%;
