@@ -146,12 +146,12 @@
 
 @mixin button($weight: semi-bold) {
   display: inline-block;
-  padding: ms(-1) ms(1);
+  padding: ms(-2) ms(2);
+  border-radius: 3px;
   color: $white;
-  font-size: ms(-1);
+  font-size: ms(0, 0.875rem);
+  font-weight: map-get($font-weight, $weight);
   text-align: center;
-  font-weight: map-get($font-weight, semi-bold);
 
-  @include uppercase;
   @include hover-transition(all);
 }

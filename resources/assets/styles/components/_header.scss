@@ -41,6 +41,11 @@
   list-style: none;
   padding: 0;
 
+  .menu-item a {
+    font-size: ms(0, 0.875rem);
+    font-weight: map-get($font-weight, semi-bold);
+  }
+
   > .menu-item {
     position: relative;
 
@@ -48,9 +53,7 @@
       padding: 0 ms(0);
       align-items: center;
       color: $dark-gray;
-      font-size: ms(-1);
 
-      @include uppercase(semi-bold);
       @include hover-transition(color);
     }
 
@@ -58,12 +61,18 @@
       position: absolute;
       top: calc(100% + 1px);
       left: ms(0);
-      min-width: ms(10);
-      padding: ms(2);
+      min-width: ms(9);
+      padding: ms(0) ms(1);
       opacity: 0;
       background-color: $white;
       pointer-events: none;
       list-style: none;
+
+      a {
+        display: block;
+        padding: ms(-4) 0;
+        color: $md-gray;
+      }
 
       @include hover-transition(opacity);
     }
