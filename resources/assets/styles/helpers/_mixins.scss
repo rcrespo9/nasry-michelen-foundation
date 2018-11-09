@@ -152,6 +152,7 @@
   background-color: $dark-cyan;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   &.has-bg-img::before {
     content: "";
