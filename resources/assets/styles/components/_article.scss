@@ -12,28 +12,28 @@
     @include s1;
   }
 
-  h2,
-  h3,
-  h4 {
+  > h2,
+  > h3,
+  > h4 {
     margin-bottom: ms(-2);
     color: $dark-cyan;
 
     @include serif-font;
   }
 
-  h2 {
+  > h2 {
     @include t2;
   }
 
-  h3 {
+  > h3 {
     @include t1;
   }
 
-  h4 {
+  > h4 {
     font-size: ms(0);
   }
 
-  p {
+  > p {
     @include paragraph-copy;
 
     + h2,
@@ -43,18 +43,18 @@
     }
   }
 
-  ol,
-  ul,
-  dl {
+  > ol,
+  > ul,
+  > dl {
     margin: ms(0) 0;
   }
 
-  ol,
-  ul {
+  > ol,
+  > ul {
     padding-left: ms(3);
   }
 
-  dl {
+  > dl {
     dt {
       font-weight: map-get($font-weight, bold);
     }
@@ -64,7 +64,7 @@
     }
   }
 
-  blockquote {
+  > blockquote {
     @include blockquote;
   }
 }

@@ -7,18 +7,20 @@
 
 <article {{post_class('c-post-card')}}>
   <a href="{{$pressUrl ? $pressUrl : get_permalink()}}" class="c-post-card__link" {{$pressUrl ? 'target="_blank"' : ''}}>
-  <div class="c-post-card__img" style="background-image: url({{the_post_thumbnail_url('medium')}});">
+    <div class="c-post-card__img" style="background-image: url({{the_post_thumbnail_url('medium')}});">
       @include('partials.category-tag')
     </div>
-    <div class="c-post-card__content">
-      <div class="c-post-card__header">
-        <div class="c-post-card__date">
-          @include('partials.entry-meta')
+    <div class="c-post-card__inner">
+      <div class="c-post-card__content">
+        <div class="c-post-card__header">
+          <div class="c-post-card__date">
+            @include('partials.entry-meta')
+          </div>
+          <h3 class="c-post-card__title">{{get_the_title()}}</h3>
         </div>
-        <h3 class="c-post-card__title">{{get_the_title()}}</h3>
-      </div>
-      <div class="c-post-card__excerpt">
-        {{the_excerpt()}}
+        <div class="c-post-card__excerpt">
+          {{the_excerpt()}}
+        </div>
       </div>
       <p class="c-post-card__more">Read More<span class="o-sr-only"> about {{get_the_title()}}</span></p>
     </div>  
