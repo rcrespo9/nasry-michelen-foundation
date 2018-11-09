@@ -12,7 +12,40 @@
     @include s1;
   }
 
+  h2,
+  h3,
+  h4 {
+    margin-bottom: ms(-2);
+    color: $dark-cyan;
+
+    @include serif-font;
+  }
+
+  h2 {
+    @include t2;
+  }
+
+  h3 {
+    @include t1;
+  }
+
+  h4 {
+    font-size: ms(0);
+  }
+
   p {
     @include paragraph-copy;
+
+    + h2,
+    + h3,
+    + h4 {
+      margin-top: ms(2);
+    }
+  }
+
+  ol,
+  ul {
+    margin: ms(0) 0;
+    padding-left: ms(3);
   }
 }
