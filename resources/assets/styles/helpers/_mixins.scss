@@ -12,6 +12,26 @@
   line-height: strip-unit($line-height);
 }
 
+@mixin t3 {
+  font-size: ms(3);
+}
+
+@mixin t2 {
+  font-size: ms(2);
+}
+
+@mixin t1 {
+  font-size: ms(1);
+}
+
+@mixin s1 {
+  font-size: ms(-1);
+}
+
+@mixin s2 {
+  font-size: ms(-2);
+}
+
 @mixin uppercase($weight: semi-bold) {
   text-transform: uppercase;
   letter-spacing: ms(-10);
@@ -63,24 +83,35 @@
   @include serif-font;
 }
 
-@mixin t3 {
-  font-size: ms(3);
-}
+@mixin blockquote {
+  position: relative;
+  // max-width: ms(14);
+  margin: ms(1) 0;
+  padding-left: ms(2);
+  color: $dark-cyan;
 
-@mixin t2 {
-  font-size: ms(2);
-}
+  p {
+    font-style: italic;
 
-@mixin t1 {
-  font-size: ms(1);
-}
+    @include serif-font($weight: regular);
+    @include t1;
 
-@mixin s1 {
-  font-size: ms(-1);
-}
+    + footer {
+      margin-top: ms(-3);
+    }
+  }
 
-@mixin s2 {
-  font-size: ms(-2);
+  cite {
+    font-size: ms(-1);
+    font-style: normal;
+
+    @include uppercase;
+
+    &::before {
+      content: "–";
+      padding-right: ms(-5);
+    }
+  }
 }
 
 /** Animation mixins */

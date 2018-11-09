@@ -44,8 +44,27 @@
   }
 
   ol,
-  ul {
+  ul,
+  dl {
     margin: ms(0) 0;
+  }
+
+  ol,
+  ul {
     padding-left: ms(3);
+  }
+
+  dl {
+    dt {
+      font-weight: map-get($font-weight, bold);
+    }
+
+    dd {
+      margin-left: ms(2);
+    }
+  }
+
+  blockquote {
+    @include blockquote;
   }
 }
