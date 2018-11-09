@@ -21,19 +21,23 @@
   }
 
   &.category-press {
-    @include post-card-custom-styles($blue);
+    @include post-card-custom-styles(map-get($category-colors, press));
   }
 
   &.category-scholarships {
-    @include post-card-custom-styles($green);
+    @include post-card-custom-styles(map-get($category-colors, scholarships));
   }
 
   &.category-news {
-    @include post-card-custom-styles($cyan);
+    @include post-card-custom-styles(map-get($category-colors, news));
   }
 
   &.category-events {
-    @include post-card-custom-styles($red);
+    @include post-card-custom-styles(map-get($category-colors, events));
+  }
+
+  &.category-uncategorized {
+    @include post-card-custom-styles(map-get($category-colors, uncategorized));
   }
 
   .o-category-tag {

@@ -11,25 +11,32 @@
 .c-post-card {
   &.category-press {
     .o-category-tag {
-      background-color: $blue;
+      background-color: map-get($category-colors, press);
     }
   }
 
   &.category-scholarships {
     .o-category-tag {
-      background-color: $green;
+      background-color: map-get($category-colors, scholarships);
     }
   }
 
   &.category-news {
     .o-category-tag {
-      background-color: $cyan;
+      background-color: map-get($category-colors, news);
     }
   }
 
   &.category-events {
     .o-category-tag {
-      background-color: $red;
+      background-color: map-get($category-colors, events);
     }
+  }
+}
+
+.c-article.category-uncategorized .c-page-header__parent-title,
+.c-post-card.category-uncategorized .c-post-card__img {
+  .o-category-tag {
+    background-color: map-get($category-colors, uncategorized);
   }
 }
