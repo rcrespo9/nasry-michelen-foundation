@@ -4,34 +4,21 @@
   @include('partials.homepage-header')
   <div class="c-homepage-content">  
     @if ( have_rows('split_content_block') )
-      @php 
-        $block = get_field('split_content_block')[0];
-        $blockImageID = $block['split_content_block_image'];
-        $blockContent = $block['split_content_block_content'];
-        $blockDirection = $block['split_content_block_direction'];
-        $blockCTAText = $block['split_content_block_cta_text'];
-        $blockCTAUrl = $block['split_content_block_cta_url'];
-      @endphp
-
       @component('components.page-section')
-        @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'cta' => ['text' => $blockCTAText, 'url' => $blockCTAUrl]])
-        @endcomponent
+        @include('partials.split-content-block', ['blockIndex' => 0])
       @endcomponent
     @endif
-    @include('partials.announcements')
-    @if ( have_rows('split_content_block') && count(get_field('split_content_block')) > 1 )
-      @php 
-        $block = get_field('split_content_block')[1];
-        $blockImageID = $block['split_content_block_image'];
-        $blockContent = $block['split_content_block_content'];
-        $blockDirection = $block['split_content_block_direction'];
-        $blockCTAText = $block['split_content_block_cta_text'];
-        $blockCTAUrl = $block['split_content_block_cta_url'];
-      @endphp
-
-      @component('components.page-section')
-        @component('components.split-content-block', ['imageID' => $blockImageID, 'content' => $blockContent, 'isReverse' => $blockDirection, 'cta' => ['text' => $blockCTAText, 'url' => $blockCTAUrl]])
+    @component('components.page-section', ['header' => 'Announcements', 'isSecondaryClass' => true])
+      @slot('ctaLink')
+        @component('components.cta-link', ['url' => get_permalink(get_post(56)->ID), 'class' => 'c-page-section__cta-link'])
+          View more announcements
         @endcomponent
+      @endslot
+      @include('partials.homepage-announcements')
+    @endcomponent
+    @if ( have_rows('split_content_block') && count(get_field('split_content_block')) > 1 )
+      @component('components.page-section')
+        @include('partials.split-content-block', ['blockIndex' => 1])
       @endcomponent
     @endif
   </div>
