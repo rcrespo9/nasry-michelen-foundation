@@ -5,7 +5,7 @@
 
 <article {{post_class('c-post-card')}}>
   <a href="{{get_permalink()}}" class="c-post-card__link">
-  <div class="c-post-card__img" style="background-image: url({{the_post_thumbnail_url('full')}});">
+  <div class="c-post-card__img" style="background-image: url({{the_post_thumbnail_url('medium')}});">
       @include('partials.category-tag')
     </div>
     <div class="c-post-card__content">

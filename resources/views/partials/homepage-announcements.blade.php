@@ -8,11 +8,11 @@
   $the_query = new WP_QUERY($args);
 @endphp
 
-<div class="c-announcements">
+@component('components.announcements')
   @if($the_query->have_posts())
     @while($the_query->have_posts()) @php $the_query->the_post() @endphp
       @include('partials.post-card')
     @endwhile
   @endif
-  @php wp_reset_postdata(); @endphp
-</div>
+  @php wp_reset_postdata(); @endphp    
+@endcomponent

@@ -1,5 +1,6 @@
 .c-announcements {
   grid-template-columns: repeat(3, 1fr);
+  row-gap: ms(4);
 
   @include grid-row(ms(6));
 }
