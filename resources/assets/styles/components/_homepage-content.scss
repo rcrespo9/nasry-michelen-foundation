@@ -1,3 +1,5 @@
 .c-homepage-content {
   padding-top: ms(5);
+
+  @include content-wrapper;
 }

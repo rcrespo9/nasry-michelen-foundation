@@ -46,12 +46,9 @@
 }
 
 .c-post-card__date {
-  display: block;
-  margin-bottom: ms(-5);
-  color: $gray;
-  font-size: ms(-2);
+  margin-bottom: ms(-7);
 
-  @include uppercase(bold);
+  @include s2;
 }
 
 .c-post-card__title {

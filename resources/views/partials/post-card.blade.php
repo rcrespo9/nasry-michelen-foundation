@@ -10,7 +10,9 @@
     </div>
     <div class="c-post-card__content">
       <div class="c-post-card__header">
-        <time class="c-post-card__date" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
+        <div class="c-post-card__date">
+          @include('partials.entry-meta')
+        </div>
         <h3 class="c-post-card__title">{{get_the_title()}}</h3>
       </div>
       <div class="c-post-card__excerpt">

@@ -63,6 +63,26 @@
   @include serif-font;
 }
 
+@mixin t3 {
+  font-size: ms(3);
+}
+
+@mixin t2 {
+  font-size: ms(2);
+}
+
+@mixin t1 {
+  font-size: ms(1);
+}
+
+@mixin s1 {
+  font-size: ms(-1);
+}
+
+@mixin s2 {
+  font-size: ms(-2);
+}
+
 /** Animation mixins */
 
 @mixin hover-transition($property) {
@@ -84,6 +104,12 @@
   margin: 0 auto;
   padding-left: ms(2);
   padding-right: ms(2);
+}
+
+@mixin content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /** Component mixins */

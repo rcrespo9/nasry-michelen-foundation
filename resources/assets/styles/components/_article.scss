@@ -1,6 +1,16 @@
+.c-article {
+  @include content-wrapper;
+}
+
 .c-article__content {
   padding-top: ms(4);
   padding-bottom: ms(4);
+
+  .content__meta {
+    margin-bottom: ms(1);
+
+    @include s1;
+  }
 
   p {
     @include paragraph-copy;

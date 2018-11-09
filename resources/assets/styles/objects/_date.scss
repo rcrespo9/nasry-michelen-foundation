@@ -1,0 +1,6 @@
+.o-date {
+  color: $gray;
+  font-size: inherit;
+
+  @include uppercase(bold);
+}
