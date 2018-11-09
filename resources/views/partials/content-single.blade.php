@@ -7,3 +7,4 @@
     @php the_content() @endphp
   </div>
 </article>
+@include('partials.recent-announcements')

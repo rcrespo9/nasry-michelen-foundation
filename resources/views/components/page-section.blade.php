@@ -1,4 +1,4 @@
-<section class="c-page-section{{$isSecondaryClass ? ' c-page-section--secondary' : ''}}">
+<section class="c-page-section{{$isSecondaryClass ? ' c-page-section--secondary' : ''}} {{is_front_page() ? 'c-page-section--home' : ''}}">
   <div class="l-wrap">
     @if ($header)
       <div class="c-page-section__header">
