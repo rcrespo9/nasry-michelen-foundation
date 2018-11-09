@@ -12,19 +12,6 @@
   background-repeat: no-repeat;
 }
 
-.c-post-card__tag {
-  position: absolute;
-  z-index: 1;
-  top: ms(1);
-  left: ms(1);
-  padding: ms(-3) ms(-1);
-  color: $white;
-  font-size: ms(-2);
-  text-align: center;
-
-  @include uppercase;
-}
-
 .c-post-card {
   &.category-press {
     @include post-card-custom-styles($blue);
@@ -40,6 +27,13 @@
 
   &.category-events {
     @include post-card-custom-styles($red);
+  }
+
+  .o-category-tag {
+    position: absolute;
+    z-index: 1;
+    top: ms(1);
+    left: ms(1);
   }
 }
 

@@ -1,3 +1,6 @@
-<article @php post_class('c-page-content') @endphp>
-  @php the_content() @endphp
+<article @php post_class('c-article') @endphp>
+  @include('partials.page-header')
+  <div class="c-article__content l-wrap--small">
+    @php the_content() @endphp
+  </div>
 </article>

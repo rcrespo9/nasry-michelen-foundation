@@ -6,8 +6,14 @@
 <header class="c-page-header {{ $featuredImage ? 'has-bg-img' : '' }}" style="{{ $featuredImage ? 'background-image:url(' . $featuredImage .');' : '' }}">
   <div class="l-wrap">
     <div class="c-page-header__content">
-      @if($post->post_parent)
-        <span class="c-page-header__parent-title">{{ $parent }}</span>
+      @if($post->post_parent || is_single())
+        <div class="c-page-header__parent-title">
+          @if($post->post_parent)
+            <span class="parent-title__text">{{ $parent }}</span>
+          @elseif (is_single())
+            @include('partials.category-tag')
+          @endif
+        </div>
       @endif
       <h1 class="c-page-header__title">{{ App::title() }}</h1>
       <div class="c-page-header__breadcrumbs">{{ App::breadcrumbs() }}</div>

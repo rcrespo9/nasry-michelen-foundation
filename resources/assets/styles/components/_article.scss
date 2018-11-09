@@ -1,8 +1,6 @@
-.c-page-content {
+.c-article__content {
   padding-top: ms(4);
   padding-bottom: ms(4);
-
-  @include container('small');
 
   p {
     @include paragraph-copy;

@@ -6,7 +6,7 @@
   @include page-header;
 }
 
-.c-page-header__parent-title,
+.c-page-header__parent-title .parent-title__text,
 .c-page-header__breadcrumbs {
   font-style: italic;
 
@@ -14,9 +14,11 @@
 }
 
 .c-page-header__parent-title {
-  display: block;
   margin-bottom: ms(0);
-  font-size: ms(1);
+
+  .parent-title__text {
+    font-size: ms(1);
+  }
 }
 
 .c-page-header__title {

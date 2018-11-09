@@ -1,3 +1,17 @@
 .l-wrap {
-  @include container('large');
+  max-width: ms(15);
+
+  @include container;
+}
+
+.l-wrap--medium {
+  max-width: ms(14);
+
+  @include container;
+}
+
+.l-wrap--small {
+  max-width: ms(13);
+
+  @include container;
 }

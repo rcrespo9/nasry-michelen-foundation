@@ -1,0 +1,35 @@
+.o-category-tag {
+  padding: ms(-4) ms(-1);
+  color: $white;
+  font-size: ms(-2);
+  text-align: center;
+
+  @include uppercase;
+}
+
+.c-article,
+.c-post-card {
+  &.category-press {
+    .o-category-tag {
+      background-color: $blue;
+    }
+  }
+
+  &.category-scholarships {
+    .o-category-tag {
+      background-color: $green;
+    }
+  }
+
+  &.category-news {
+    .o-category-tag {
+      background-color: $cyan;
+    }
+  }
+
+  &.category-events {
+    .o-category-tag {
+      background-color: $red;
+    }
+  }
+}

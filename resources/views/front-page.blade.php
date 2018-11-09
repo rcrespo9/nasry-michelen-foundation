@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+  @include('partials.homepage-header')
   <div class="c-homepage-content">  
     @if ( have_rows('split_content_block') )
       @php 

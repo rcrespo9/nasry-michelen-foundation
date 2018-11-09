@@ -79,15 +79,7 @@
   column-gap: $gap;
 }
 
-@mixin container($size) {
-  @if $size == 'large' {
-    max-width: ms(15);
-  }
-
-  @else if $size == 'small' {
-    max-width: ms(13, 0.875rem);
-  }
-
+@mixin container {
   width: 100%;
   margin: 0 auto;
   padding-left: ms(2);
@@ -126,10 +118,6 @@
 
 @mixin post-card-custom-styles($color) {
   border-bottom: 5px solid $color;
-
-  .c-post-card__tag {
-    background-color: $color;
-  }
 
   .c-post-card__more {
     color: $color;
