@@ -1,10 +1,12 @@
 @php
   $category = get_the_category();
-  $firstCategory = $category[0]->cat_name;   
+  $firstCategory = $category[0]->cat_name;
+  $isPressCategory = $firstCategory === 'Press';
+  $pressUrl = get_field('press_url');
 @endphp
 
 <article {{post_class('c-post-card')}}>
-  <a href="{{get_permalink()}}" class="c-post-card__link">
+  <a href="{{$pressUrl ? $pressUrl : get_permalink()}}" class="c-post-card__link" {{$pressUrl ? 'target="_blank"' : ''}}>
   <div class="c-post-card__img" style="background-image: url({{the_post_thumbnail_url('medium')}});">
       @include('partials.category-tag')
     </div>
