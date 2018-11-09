@@ -3,43 +3,47 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
-$spacer: 2rem;
+$spacer: ms(1);
 
 /** Media alignment */
 
-.alignnone {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%;
-  height: auto;
-}
-
+.alignnone,
 .aligncenter {
-  display: block;
-  margin: ($spacer / 2) auto;
+  margin: $spacer auto;
+  max-width: 100%;
   height: auto;
 }
 
 .alignleft,
 .alignright {
-  margin-bottom: ($spacer / 2);
+  margin-top: $spacer;
+  margin-bottom: $spacer;
   height: auto;
 }
 
 @media (min-width: 30rem) {
+  .alignleft,
+  .alignright {
+    margin-top: $spacer / 2;
+    margin-bottom: $spacer / 2;
+  }
+
   .alignleft {
     float: left;
-    margin-right: ($spacer / 2);
+    margin-right: $spacer * 2;
   }
 
   .alignright {
     float: right;
-    margin-left: ($spacer / 2);
+    margin-left: $spacer * 2;
   }
 }
 
 /** Captions */
 
-// TODO: .wp-caption {}
-// TODO: .wp-caption img {}
-// TODO: .wp-caption-text {}
+.wp-caption-text {
+  margin-top: ms(-2);
+  font-size: ms(-1);
+  font-weight: map-get($font-weight, semi-bold);
+  color: $md-gray;
+}
