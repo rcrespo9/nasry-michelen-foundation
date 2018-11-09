@@ -100,10 +100,11 @@
   position: relative;
   display: flex;
   align-items: center;
+  background-color: $dark-cyan;
   background-size: cover;
   background-repeat: no-repeat;
 
-  &::before {
+  &.has-bg-img::before {
     content: "";
     position: absolute;
     top: 0;

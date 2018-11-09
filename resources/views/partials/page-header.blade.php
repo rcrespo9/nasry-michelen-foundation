@@ -3,7 +3,7 @@
   $parent = get_the_title($post->post_parent);
 @endphp
 
-<header class="c-page-header" style="{{ $featuredImage ? 'background-image:url(' . $featuredImage .');' : '' }}">
+<header class="c-page-header {{ $featuredImage ? 'has-bg-img' : '' }}" style="{{ $featuredImage ? 'background-image:url(' . $featuredImage .');' : '' }}">
   <div class="l-wrap">
     <div class="c-page-header__content">
       @if($post->post_parent)
