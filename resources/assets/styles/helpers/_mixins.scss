@@ -154,7 +154,7 @@
 }
 
 @mixin max-width-mq($width) {
-  @media screen and (max-width: $width) {
+  @media screen and (max-width: $width - 0.063em) {
     @content;
   }
 }

@@ -36,6 +36,16 @@
     margin: 0;
     list-style: none;
   }
+
+  @include max-width-mq($lg-tablet) {
+    display: none;
+  }
+}
+
+.c-header__nav-trigger {
+  @include media-query($lg-tablet) {
+    display: none;
+  }
 }
 
 .nav__list {

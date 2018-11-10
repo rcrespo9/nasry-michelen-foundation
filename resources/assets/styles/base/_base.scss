@@ -26,4 +26,8 @@ body {
   color: $md-gray;
 
   @include sans-serif-font;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
