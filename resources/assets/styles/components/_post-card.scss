@@ -8,9 +8,8 @@
 .c-post-card__img {
   position: relative;
   min-height: ms(8);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  @include bg-img;
 }
 
 .c-post-card {

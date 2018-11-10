@@ -144,16 +144,35 @@
   min-height: 100vh;
 }
 
+@mixin media-query($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin max-width-mq($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
 /** Component mixins */
+
+@mixin bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 @mixin page-header {
   position: relative;
   display: flex;
   align-items: center;
   background-color: $dark-cyan;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  &.has-bg-img {
+    @include bg-img;
+  }
 
   &.has-bg-img::before {
     content: "";

@@ -6,11 +6,19 @@
 
 html {
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.333;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  @include media-query($sm-desktop) {
+    font-size: 18px;
+  }
+
+  @include media-query($md-desktop) {
+    font-size: 20px;
+  }
 }
 
 body {

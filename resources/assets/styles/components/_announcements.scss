@@ -1,6 +1,10 @@
 .c-announcements {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   row-gap: ms(4);
 
   @include grid-row(ms(6));
+
+  @include media-query($sm-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
