@@ -47,3 +47,18 @@ $spacer: ms(1);
   font-weight: map-get($font-weight, semi-bold);
   color: $md-gray;
 }
+
+/** Galleries */
+
+.gallery {
+  margin: $spacer 0;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: ms(2);
+  row-gap: ms(2);
+
+  @include grid-row;
+}
+
+.gallery-item {
+  margin: 0;
+}
