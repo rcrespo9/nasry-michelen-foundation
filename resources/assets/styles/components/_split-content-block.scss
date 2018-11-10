@@ -37,7 +37,7 @@
 }
 
 .c-split-content-block__text {
-  padding: ms(3) 0 0;
+  padding: ms(3) ms(2) 0;
 
   @include media-query($lg-tablet) {
     padding: ms(4) ms(3) 0;

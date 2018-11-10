@@ -131,11 +131,14 @@
   column-gap: $gap;
 }
 
-@mixin container {
+@mixin container($hasPadding: true) {
   width: 100%;
   margin: 0 auto;
-  padding-left: ms(2);
-  padding-right: ms(2);
+
+  @if $hasPadding {
+    padding-left: ms(2);
+    padding-right: ms(2);
+  }
 }
 
 @mixin content-wrapper {

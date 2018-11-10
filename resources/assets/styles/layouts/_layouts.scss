@@ -4,6 +4,12 @@
   @include container;
 }
 
+.l-wrap--no-padding {
+  max-width: calc(#{ms(15)} - #{ms(2) * 2});
+
+  @include container($hasPadding: false);
+}
+
 .l-wrap--medium {
   max-width: ms(14);
 
