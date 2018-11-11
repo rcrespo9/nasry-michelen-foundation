@@ -8,11 +8,12 @@
 
   .c-page-section__header {
     align-items: center;
-    margin-bottom: ms(1);
+    margin-bottom: ms(2);
 
     @include media-query($sm-tablet) {
       display: flex;
       justify-content: space-between;
+      margin-bottom: ms(1);
     }
   }
 
