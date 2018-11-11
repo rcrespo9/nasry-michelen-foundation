@@ -5,10 +5,14 @@
 }
 
 .c-donate-prompt__inner {
-  grid-template-columns: 1fr column-width(2);
+  grid-template-columns: 1fr column-width(3);
   align-items: center;
 
   @include grid-row;
+
+  @include media-query($md-tablet) {
+    grid-template-columns: 1fr column-width(2);
+  }
 }
 
 .c-donate-prompt__text {
