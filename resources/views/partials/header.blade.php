@@ -8,9 +8,14 @@
       <div class="nav__donate">
         <a href="{{get_permalink(get_post(127)->ID)}}" class="o-btn--primary">Donate</a>
       </div>
+      <button class="nav__close js-nav-close" type="button">
+        <span class="btn__text">Close</span>
+      </button>
     </nav>
     <div class="c-header__nav-trigger">
-      <button class="nav-trigger__btn js-nav-trigger">Menu</button>
+      <button class="nav-trigger__btn js-nav-trigger" type="button">
+        <span class="btn__text">Menu</span>
+      </button>
     </div>
   </div>
 </header>
