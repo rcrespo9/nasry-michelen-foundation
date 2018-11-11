@@ -38,9 +38,10 @@
   width: 100%;
   height: 100vh;
   overflow-x: scroll;
-  padding-top: ms(6);
+  padding-top: ms(7);
   background-color: $dark-cyan;
   visibility: hidden;
+  font-size: ms(2, 1vw);
 
   &.js-nav--open {
     visibility: visible;
@@ -60,12 +61,34 @@
     overflow-x: initial;
     padding-top: 0;
     background-color: transparent;
+    font-size: inherit;
   }
 }
 
 .c-header__nav-trigger {
+  display: flex;
+
   @include media-query($lg-tablet) {
     display: none;
+  }
+}
+
+.nav-trigger__btn {
+  padding: 0;
+  font-size: inherit;
+
+  .btn__menu-icon {
+    display: inline-block;
+    vertical-align: bottom;
+    width: ms(3);
+    height: ms(3);
+    fill: $md-gray;
+
+    @include hover-transition(fill);
+  }
+
+  &:hover .btn__menu-icon {
+    fill: $dark-cyan;
   }
 }
 
@@ -109,15 +132,15 @@
 
   > .menu-item {
     position: relative;
-    font-size: ms(7, 1vw);
+    font-size: ms(5, 1em);
 
     @include media-query($lg-tablet) {
       font-size: inherit;
-      padding: 0 ms(0);
+      padding: 0 ms(0, 1em);
     }
 
     &:not(:last-of-type) {
-      margin-bottom: ms(-2);
+      margin-bottom: ms(-4, 1em);
 
       @include media-query($lg-tablet) {
         margin-bottom: 0;
@@ -159,9 +182,16 @@
 
     &::before {
       @include max-width-mq($lg-tablet) {
-        content: "+";
+        content: "";
+        display: inline-block;
         position: absolute;
-        right: ms(2);
+        margin-top: ms(-2, -1.75em) / 2;
+        top: ms(-2, 1.75em);
+        right: ms(-2, 1em);
+        background-image: url('../images/angle-down.svg');
+        background-size: ms(-2, 1.125em) ms(-2, 1.75em);
+        width: ms(-2, 1.125em);
+        height: ms(-2, 1.75em);
         color: $white;
       }
     }
@@ -171,8 +201,9 @@
       padding: 0;
 
       a {
-        padding: ms(0, 1vw) 0 ms(0, 1vw) ms(6, 1vw);
-        font-size: ms(5, 1vw);
+        display: block;
+        padding: ms(-4, 1em) 0 ms(-4, 1em) ms(-1, 1em);
+        font-size: ms(-1, 1em);
         color: $xlt-gray;
 
         @include max-width-mq($lg-tablet) {
@@ -204,7 +235,6 @@
         transform: translateY(9%);
 
         a {
-          display: block;
           padding: ms(-4) 0;
           font-size: ms(0, 0.875rem);
           color: $md-gray;
@@ -224,7 +254,7 @@
 
 .nav__donate {
   display: none;
-  margin-left: ms(0);
+  margin-left: ms(0,);
   align-self: center;
 
   @include media-query($lg-tablet) {
@@ -234,8 +264,16 @@
 
 .nav__close {
   position: absolute;
-  top: $header-height / 2;
-  right: ms(2);
+  top: ms(2, 1em);
+  right: ms(1, 1em);
+
+  .close__icon {
+    display: inline-block;
+    vertical-align: bottom;
+    width: ms(4, 1em);
+    height: ms(4, 1em);
+    fill: $white;
+  }
 
   @include media-query($lg-tablet) {
     display: none;

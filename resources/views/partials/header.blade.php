@@ -9,12 +9,14 @@
         <a href="{{get_permalink(get_post(127)->ID)}}" class="o-btn--primary">Donate</a>
       </div>
       <button class="nav__close js-nav-close" type="button">
-        <span class="btn__text">Close</span>
+        <span class="o-sr-only">Close</span>
+        <svg class="close__icon"><use xlink:href="#icon-close"></use></svg>
       </button>
     </nav>
     <div class="c-header__nav-trigger">
       <button class="nav-trigger__btn js-nav-trigger" type="button">
-        <span class="btn__text">Menu</span>
+        <span class="o-sr-only">Menu</span>
+        <svg class="btn__menu-icon"><use xlink:href="#icon-menu"></use></svg>
       </button>
     </div>
   </div>
