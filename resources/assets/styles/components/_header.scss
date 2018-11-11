@@ -70,10 +70,12 @@
 }
 
 .nav__list {
+  width: 100%;
   padding-left: ms(3);
 
   @include media-query($lg-tablet) {
     padding-left: 0;
+    width: initial;
     height: inherit;
 
     > .menu-item:hover > a,
@@ -115,7 +117,7 @@
     }
 
     &:not(:last-of-type) {
-      margin-bottom: ms(0);
+      margin-bottom: ms(-2);
 
       @include media-query($lg-tablet) {
         margin-bottom: 0;
@@ -153,11 +155,22 @@
   }
 
   > .menu-item-has-children {
+    cursor: pointer;
+
+    &::before {
+      @include max-width-mq($lg-tablet) {
+        content: "+";
+        position: absolute;
+        right: ms(2);
+        color: $white;
+      }
+    }
+
     .sub-menu {
+      display: none;
       padding: 0;
 
       a {
-        display: block;
         padding: ms(0, 1vw) 0 ms(0, 1vw) ms(6, 1vw);
         font-size: ms(5, 1vw);
         color: $xlt-gray;
@@ -167,15 +180,23 @@
         }
       }
 
+      .menu-item {
+        @include max-width-mq($lg-tablet) {
+          line-height: strip-unit(ms(0));
+        }
+      }
+
       @include media-query($lg-tablet) {
         position: absolute;
         top: 100%;
         left: ms(0);
+        display: block;
         min-width: ms(9);
-        padding: ms(-1) ms(0);
+        padding: ms(0) ms(0);
         opacity: 0;
         background-color: $white;
         pointer-events: none;
+        cursor: auto;
         border: 1px solid $lt-gray;
         box-shadow: 0 1px 1px 0 rgba($black, 0.05);
         transform: translateY(9%);
