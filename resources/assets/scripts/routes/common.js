@@ -7,6 +7,7 @@ export default {
     theMobileNavBtn: document.querySelector('.js-nav-trigger'),
     theMobileNavList: document.querySelector('.js-nav-list'),
     allSubMenus: document.querySelectorAll('.menu-item-has-children .sub-menu'),
+    allDropdownItems: document.querySelectorAll('.menu-item-has-children'),
     closeMobileNavBtn: document.querySelector('.js-nav-close'),
     theBody: document.body,
     noScrollClass: 'no-scroll',
@@ -34,6 +35,7 @@ export default {
       const $subMenu = $(e.target.lastElementChild);
 
       $subMenu.slideToggle();
+      $(e.target).toggleClass('sub-menu--open');
     }
   },
   addNavListeners() {
@@ -47,6 +49,7 @@ export default {
     this.data.closeMobileNavBtn.removeEventListener('click', () => this.closeNav, false);
     this.data.theMobileNavList.removeEventListener('click', this.toggleNavDropdown, false);
     this.data.allSubMenus.forEach(el => el.style = '');
+    this.data.allDropdownItems.forEach(el => $(el).removeClass('sub-menu--open'));
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
