@@ -9,7 +9,11 @@
   font-family: 'schoolbook', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: map-get($font-weight, $weight);
   font-feature-settings: "liga";
-  line-height: strip-unit($line-height);
+  line-height: strip-unit(ms(1, $thread: a));
+
+  @include media-query($lg-mobile) {
+    line-height: strip-unit($line-height);
+  }
 }
 
 @mixin t3 {

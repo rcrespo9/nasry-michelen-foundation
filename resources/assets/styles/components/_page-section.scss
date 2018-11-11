@@ -22,7 +22,7 @@
   }
 
   .c-page-section__title + .c-page-section__cta-link {
-    margin-top: ms(-5);
+    margin-top: ms(-3);
 
     @include media-query($sm-tablet) {
       margin-top: 0;
