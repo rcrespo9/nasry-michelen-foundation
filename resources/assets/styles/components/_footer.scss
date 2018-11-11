@@ -16,11 +16,14 @@
 /** Top part of the footer */
 
 .c-footer__top {
-  grid-template-columns: 1fr column-width(3);
   padding: ms(5) 0;
   border-bottom: 1px solid $white;
 
-  @include grid-row;
+  @include media-query($lg-tablet) {
+    grid-template-columns: 1fr column-width(3);
+
+    @include grid-row;
+  }
 }
 
 .c-footer__nav {
@@ -45,6 +48,14 @@
   }
 }
 
+.c-footer__informed {
+  margin-top: ms(1);
+
+  @include media-query($lg-tablet) {
+    margin-top: 0;
+  }
+}
+
 .informed__header {
   @include sans-serif-font;
   @include footer-header;
@@ -64,6 +75,8 @@
 }
 
 .c-footer__copy {
+  display: block;
+
   @include footer-copy;
 }
 
