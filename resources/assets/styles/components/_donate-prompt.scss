@@ -5,10 +5,12 @@
 }
 
 .c-donate-prompt__inner {
-  grid-template-columns: 1fr column-width(3);
-  align-items: center;
+  @include media-query($lg-mobile) {
+    grid-template-columns: 1fr column-width(3);
+    align-items: center;
 
-  @include grid-row;
+    @include grid-row;
+  }
 
   @include media-query($md-tablet) {
     grid-template-columns: 1fr column-width(2);
@@ -16,7 +18,22 @@
 }
 
 .c-donate-prompt__text {
+  margin-bottom: ms(1);
   font-size: ms(2);
 
   @include serif-font(regular);
+
+  @include media-query($lg-mobile) {
+    margin-bottom: ms(0);
+  }
+}
+
+.cta-donate-prompt__btn {
+  display: block;
+  width: 100%;
+
+  @include media-query($sm-mobile) {
+    display: inline-block;
+    width: initial;
+  }
 }

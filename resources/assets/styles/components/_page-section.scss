@@ -7,14 +7,25 @@
   padding: ms(5) 0;
 
   .c-page-section__header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: ms(1);
+
+    @include media-query($sm-tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .c-page-section__title {
     @include page-section-header;
+  }
+
+  .c-page-section__title + .c-page-section__cta-link {
+    margin-top: ms(-5);
+
+    @include media-query($sm-tablet) {
+      margin-top: 0;
+    }
   }
 }
 

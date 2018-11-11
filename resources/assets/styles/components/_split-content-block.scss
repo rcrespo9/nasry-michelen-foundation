@@ -27,9 +27,15 @@
 }
 
 .c-split-content-block__img {
-  min-height: ms(13);
+  min-height: ms(12);
 
-  @include bg-img($position: top);
+  @include bg-img($position: center);
+
+  @include media-query($lg-tablet) {
+    min-height: ms(13);
+
+    @include bg-img($position: top);
+  }
 }
 
 .c-split-content-block__text {

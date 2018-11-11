@@ -27,9 +27,15 @@
 }
 
 .c-footer__nav {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: ms(1);
 
   @include grid-row;
+
+  @include media-query($lg-mobile) {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: initial;
+  }
 
   > .menu-item > a {
     @include footer-header;
@@ -68,23 +74,34 @@
 /** Bottom part of the footer */
 
 .c-footer__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: ms(1) 0;
+
+  @include media-query($lg-mobile) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .c-footer__copy {
   display: block;
+  margin-bottom: ms(-7);
 
   @include footer-copy;
+
+  @include media-query($lg-mobile) {
+    margin-bottom: 0;
+  }
 }
 
-.c-footer__misc {
+.c-footer__misc,
+.misc__item {
   display: flex;
 }
 
 .misc__item {
+  align-items: center;
+
   &:not(:last-of-type) {
     &::after {
       content: "|";
