@@ -10,20 +10,22 @@ $spacer: ms(1);
 .alignnone,
 .aligncenter {
   margin: $spacer auto;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .alignleft,
 .alignright {
+  width: 100%;
   margin-top: $spacer;
   margin-bottom: $spacer;
   height: auto;
 }
 
-@media (min-width: 30rem) {
+@include media-query($lg-mobile) {
   .alignleft,
   .alignright {
+    width: initial;
     margin-top: $spacer / 2;
     margin-bottom: $spacer / 2;
   }
@@ -52,10 +54,14 @@ $spacer: ms(1);
 
 .gallery {
   margin: $spacer 0;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   row-gap: ms(2);
 
   @include grid-row;
+
+  @include media-query($lg-mobile) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .gallery-item {
