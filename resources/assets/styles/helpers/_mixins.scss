@@ -176,6 +176,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding: ms(4) 0;
   background-color: $dark-cyan;
 
   &.has-bg-img {
