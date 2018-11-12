@@ -27,9 +27,13 @@
 }
 
 .c-split-content-block__img {
-  min-height: ms(12);
+  min-height: ms(10);
 
   @include bg-img($position: center);
+
+  @include media-query($lg-mobile) {
+    min-height: ms(12);
+  }
 
   @include media-query($lg-tablet) {
     min-height: ms(13);
