@@ -35,7 +35,7 @@
     @include grid-row;
   }
 
-  @include media-query($lg-mobile) {
+  @include media-query($sm-tablet) {
     grid-template-columns: repeat(4, 1fr);
     row-gap: initial;
   }
@@ -87,7 +87,7 @@
 .c-footer__bottom {
   padding: ms(1) 0;
 
-  @include media-query($lg-mobile) {
+  @include media-query($md-tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +100,7 @@
 
   @include footer-copy;
 
-  @include media-query($lg-mobile) {
+  @include media-query($md-tablet) {
     margin-bottom: 0;
   }
 }

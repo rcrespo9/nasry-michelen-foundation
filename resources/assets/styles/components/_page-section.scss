@@ -10,7 +10,7 @@
     align-items: center;
     margin-bottom: ms(2);
 
-    @include media-query($sm-tablet) {
+    @include media-query($md-tablet) {
       display: flex;
       justify-content: space-between;
       margin-bottom: ms(1);

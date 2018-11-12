@@ -1,7 +1,7 @@
 .c-homepage-header {
   min-height: calc(90vh - #{$header-height});
   color: $white;
-  font-size: 14px;
+  font-size: 12px;
 
   @include page-header;
 
@@ -12,10 +12,14 @@
 
 .c-homepage-header__title {
   margin-bottom: ms(-2, 1em, $thread: a);
-  font-size: ms(-1, 1em, $thread: a);
+  font-size: ms(-0, 1em, $thread: a);
 
   @include sans-serif-font;
   @include uppercase(semi-bold);
+
+  @include media-query($sm-mobile) {
+    font-size: ms(-1, 1em, $thread: a);
+  }
 }
 
 .c-homepage-header__lead {

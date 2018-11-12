@@ -12,7 +12,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  @include media-query($sm-desktop) {
+  @include media-query($lg-mobile) {
     font-size: 18px;
   }
 
