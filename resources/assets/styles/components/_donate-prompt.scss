@@ -28,7 +28,7 @@
   @include serif-font(regular);
 
   @include media-query($lg-mobile) {
-    margin-bottom: ms(0);
+    margin-bottom: 0;
   }
 }
 
