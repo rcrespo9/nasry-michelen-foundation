@@ -1,30 +1,45 @@
 .c-homepage-header {
   min-height: calc(90vh - #{$header-height});
   color: $white;
+  font-size: 14px;
 
   @include page-header;
+
+  @include media-query($sm-mobile) {
+    font-size: inherit;
+  }
 }
 
 .c-homepage-header__title {
-  margin-bottom: ms(-2, $thread: a);
-  font-size: ms(-1, $thread: a);
+  margin-bottom: ms(-2, 1em, $thread: a);
+  font-size: ms(-1, 1em, $thread: a);
 
   @include sans-serif-font;
   @include uppercase(semi-bold);
 }
 
 .c-homepage-header__lead {
-  max-width: ms(16, $thread: a);
-  margin-bottom: ms(-1, $thread: a);
-  font-size: ms(6, $thread: a);
+  max-width: ms(10, 1em, $thread: a);
+  margin-bottom: ms(-9, 1em, $thread: a);
+  font-size: ms(6, 1em, $thread: a);
 
-  @include serif-font($line-height: ms(1, 0.875rem, $thread: a));
+  @include serif-font($line-height: ms(1, 0.875em, $thread: a));
 }
 
 .c-homepage-header__blurb {
-  max-width: ms(15, $thread: a);
-  margin-bottom: ms(3, $thread: a);
-  font-size: ms(1, $thread: a);
+  max-width: ms(14, 1em, $thread: a);
+  margin-bottom: ms(2, 1em, $thread: a);
+  font-size: ms(1, 1em, $thread: a);
   font-weight: map-get($font-weight, light);
-  line-height: strip-unit(ms(2, $thread: a));
+  line-height: strip-unit(ms(2, 1em, $thread: a));
+}
+
+.c-homepage-header__cta {
+  display: block;
+  width: 100%;
+
+  @include media-query($sm-mobile) {
+    display: inline-block;
+    width: initial;
+  }
 }

@@ -12,7 +12,7 @@
       <h1 class="c-homepage-header__title">{{ App::title() }}</h1>
       <p class="c-homepage-header__lead">{{$lead}}</p>
       <p class="c-homepage-header__blurb">{{$blurb}}</p>
-      <a class="o-btn--primary" href="{{$ctaURL}}">{{$ctaText}}</a>
+      <a class="c-homepage-header__cta o-btn--primary" href="{{$ctaURL}}">{{$ctaText}}</a>
     </div>
   </div>
 </header>

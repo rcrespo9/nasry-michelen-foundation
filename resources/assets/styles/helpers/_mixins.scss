@@ -215,7 +215,7 @@
 
 @mixin button($weight: semi-bold) {
   display: inline-block;
-  padding: ms(-2) ms(2);
+  padding: ms(-1) ms(2);
   border-radius: $global-radius;
   color: $white;
   font-size: ms(0, 0.875rem);
@@ -223,4 +223,8 @@
   text-align: center;
 
   @include hover-transition(all);
+
+  @include media-query($lg-mobile) {
+    padding: ms(-2) ms(2);
+  }
 }
