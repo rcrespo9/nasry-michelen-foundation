@@ -23,9 +23,13 @@
 
 .c-page-header__title {
   margin-bottom: ms(3);
-  font-size: ms(4);
+  font-size: ms(2);
 
   @include serif-font($line-height: ms(1, $thread: a));
+
+  @include media-query($lg-mobile) {
+    font-size: ms(4);
+  }
 }
 
 .c-page-header__breadcrumbs {

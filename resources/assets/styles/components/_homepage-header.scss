@@ -1,7 +1,7 @@
 .c-homepage-header {
   min-height: calc(90vh - #{$header-height});
   color: $white;
-  font-size: 12px;
+  font-size: 11px;
 
   @include page-header;
 
