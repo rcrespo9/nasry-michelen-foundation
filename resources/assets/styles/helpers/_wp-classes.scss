@@ -3,7 +3,7 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
-$spacer: ms(1);
+$spacer: ms(2);
 
 /** Media alignment */
 
@@ -11,12 +11,14 @@ $spacer: ms(1);
 .aligncenter {
   margin: $spacer auto;
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .alignleft,
 .alignright {
   width: 100%;
+  max-width: 100%;
   margin-top: $spacer;
   margin-bottom: $spacer;
   height: auto;
