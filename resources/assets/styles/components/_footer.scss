@@ -107,16 +107,20 @@
 
 .c-footer__misc,
 .misc__item {
-  display: flex;
+  @include media-query($sm-mobile) {
+    display: flex;
+  }
 }
 
 .misc__item {
-  align-items: center;
+  @include media-query($sm-mobile) {
+    align-items: center;
 
-  &:not(:last-of-type) {
-    &::after {
-      content: "|";
-      padding: 0 ms(-4);
+    &:not(:last-of-type) {
+      &::after {
+        content: "|";
+        padding: 0 ms(-4);
+      }
     }
   }
 }

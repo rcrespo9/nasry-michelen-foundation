@@ -13,8 +13,13 @@
 .o-cta-link {
   display: inline-block;
   font-weight: map-get($font-weight, semi-bold);
+  font-size: 14px;
 
   @include link($color: $dark-gray, $hover-color: $cyan);
+
+  @include media-query($sm-mobile) {
+    font-size: inherit;
+  }
 
   &:hover .o-cta-link__arrow {
     animation: arrowPoint 0.3s linear forwards;
