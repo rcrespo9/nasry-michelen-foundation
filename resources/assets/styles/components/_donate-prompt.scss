@@ -1,7 +1,11 @@
 .c-donate-prompt {
-  padding: ms(4) 0;
+  padding: ms(3) 0;
   color: $white;
   background-color: $cyan;
+
+  @include media-query($md-tablet) {
+    padding: ms(4) 0;
+  }
 }
 
 .c-donate-prompt__inner {

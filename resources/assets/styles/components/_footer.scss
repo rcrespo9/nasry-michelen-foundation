@@ -16,10 +16,11 @@
 /** Top part of the footer */
 
 .c-footer__top {
-  padding: ms(5) 0;
+  padding: ms(3) 0;
   border-bottom: 1px solid $white;
 
   @include media-query($lg-tablet) {
+    padding: ms(5) 0;
     grid-template-columns: 1fr column-width(3);
 
     @include grid-row;
