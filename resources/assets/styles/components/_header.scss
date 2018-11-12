@@ -268,14 +268,14 @@
 
 .nav__close {
   position: absolute;
-  top: ms(2, 1em);
-  right: ms(1, 1em);
+  top: ms(3, 1em);
+  right: ms(2, 1em);
 
   .close__icon {
     display: inline-block;
     vertical-align: bottom;
-    width: ms(4, 1em);
-    height: ms(4, 1em);
+    width: ms(5, 1em, $thread: a);
+    height: ms(5, 1em, $thread: a);
     fill: $white;
   }
 
