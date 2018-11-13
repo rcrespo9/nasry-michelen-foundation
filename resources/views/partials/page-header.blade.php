@@ -3,9 +3,12 @@
   $category = get_queried_object();
   $featuredImage = null;
   $categoryImage = get_field('featured_category_image', $category);
+  $postsHome = get_option('page_for_posts');
 
-  if(is_category()) {
+  if (is_category()) {
     $featuredImage = $categoryImage;
+  } elseif (is_home() && $postsHome) {
+    $featuredImage = get_the_post_thumbnail_url($postsHome, 'full');
   } else {
     $featuredImage = get_the_post_thumbnail_url();
   }
