@@ -7,7 +7,7 @@
 
 .c-post-card__img {
   position: relative;
-  min-height: ms(8);
+  min-height: ms(11, $thread: a);
 
   @include bg-img;
 }
