@@ -30,6 +30,7 @@
 .c-footer__nav {
   @include media-query($sm-mobile) {
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: ms(1);
     row-gap: ms(1);
 
     @include grid-row;
@@ -37,6 +38,7 @@
 
   @include media-query($sm-tablet) {
     grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: initial;
     row-gap: initial;
   }
 
