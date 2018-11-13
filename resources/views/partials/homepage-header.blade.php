@@ -6,7 +6,7 @@
   $ctaText = get_field('homepage_header_cta_text');
 @endphp
 
-<header class="c-homepage-header {{ $featuredImage ? 'has-bg-img' : '' }}" style="{{ $featuredImage ? 'background-image:url(' . $featuredImage .');' : '' }}">
+<header class="c-homepage-header {{ has_post_thumbnail() ? 'has-bg-img' : '' }}" style="{{ has_post_thumbnail() ? 'background-image:url(' . $featuredImage .');' : '' }}">
   <div class="c-homepage-header__wrap l-wrap">
     <div class="c-homepage-header__content">
       <h1 class="c-homepage-header__title">{{ App::title() }}</h1>
