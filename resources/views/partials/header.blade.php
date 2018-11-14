@@ -6,7 +6,7 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav__list js-nav-list', 'container' => '']) !!}
       @endif
       <div class="nav__donate">
-        <a href="{{get_permalink(get_post(127)->ID)}}" class="o-btn--primary">Donate</a>
+        <a href="{{get_field('donate_button', 'option')}}" class="o-btn--primary">Donate</a>
       </div>
       <button class="nav__close js-nav-close" type="button">
         <span class="o-sr-only">Close</span>

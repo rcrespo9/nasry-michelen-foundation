@@ -10,7 +10,7 @@
 
 @component('components.page-section', ['header' => 'Recent Announcements', 'isSecondaryClass' => true])
   @slot('ctaLink')
-    @component('components.cta-link', ['url' => get_permalink(get_post(56)->ID), 'class' => 'c-page-section__cta-link'])
+    @component('components.cta-link', ['url' => get_field('announcements', 'option'), 'class' => 'c-page-section__cta-link'])
       View more announcements
     @endcomponent
   @endslot

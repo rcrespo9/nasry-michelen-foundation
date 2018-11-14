@@ -12,8 +12,8 @@
     <div class="c-footer__bottom">
       <small class="c-footer__copy">&copy; {{date("Y")}} Nasry Michelen Foundation. All Rights Reserved</small>
       <ul class="c-footer__misc">
-        <li class="misc__item"><a class="misc__link" href="#">Privacy Policy</a></li>
-        <li class="misc__item"><a class="misc__link" href="#">Terms of Use</a></li>
+        <li class="misc__item"><a class="misc__link" href="{{get_field('privacy_policy', 'option')}}">Privacy Policy</a></li>
+        <li class="misc__item"><a class="misc__link" href="{{get_field('terms_of_use', 'option')}}">Terms of Use</a></li>
         <li class="misc__item"><a class="misc__link" href="https://rudycrespo.com" target="_blank">Made by Rudy Crespo</a></li>
       </ul>
     </div>
