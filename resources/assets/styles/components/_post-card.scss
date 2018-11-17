@@ -8,6 +8,7 @@
 .c-post-card__img {
   position: relative;
   min-height: ms(11, $thread: a);
+  background-color: $lt-gray;
 
   @include bg-img;
 }
