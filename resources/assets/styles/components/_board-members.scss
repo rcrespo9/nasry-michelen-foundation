@@ -1,3 +1,38 @@
-.c-board-members {
-  @include grid-row;
+ul.l-board-members {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include grid-row($row-gap: ms(3));
+}
+
+.c-board-member {
+  img {
+    margin-bottom: ms(0);
+  }
+}
+
+.c-board-member__inner {
+  margin: 0;
+}
+
+.c-board-member__details {
+  padding: 0 ms(-3);
+
+  .details__item {
+    display: block;
+    line-height: strip-unit(ms(2, 0.875rem));
+  }
+
+  .details__item--name {
+    margin-bottom: ms(-5);
+    color: $dark-gray;
+    font-size: ms(1);
+    font-weight: map-get($font-weight, bold);
+  }
+
+  .details__item--creds {
+    margin-bottom: ms(-6);
+  }
 }

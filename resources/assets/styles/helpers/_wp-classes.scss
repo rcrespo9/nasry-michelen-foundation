@@ -10,18 +10,12 @@ $spacer: ms(2);
 .alignnone,
 .aligncenter {
   margin: $spacer auto;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
 }
 
 .alignleft,
 .alignright {
-  width: 100%;
-  max-width: 100%;
   margin-top: $spacer;
   margin-bottom: $spacer;
-  height: auto;
 }
 
 @include media-query($lg-mobile) {

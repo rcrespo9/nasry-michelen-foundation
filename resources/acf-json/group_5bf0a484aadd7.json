@@ -34,7 +34,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "id",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -49,6 +49,25 @@
                     "key": "field_5bf0a4f02afc0",
                     "label": "Name",
                     "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5bf0a7372afc3",
+                    "label": "Credentials",
+                    "name": "credentials",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -82,25 +101,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_5bf0a7372afc3",
-                    "label": "Credentials",
-                    "name": "credentials",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 }
             ]
         }
@@ -122,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542498235
+    "modified": 1542568578
 }
