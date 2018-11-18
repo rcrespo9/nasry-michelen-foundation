@@ -138,10 +138,24 @@
   margin-bottom: ms(5);
 }
 
-@mixin grid-row($gap: ms(2)) {
-  display: grid;
+@mixin grid-column-gap($gap) {
   grid-column-gap: $gap;
   column-gap: $gap;
+}
+
+@mixin grid-row-gap($gap) {
+  grid-row-gap: $gap;
+  row-gap: $gap;
+}
+
+@mixin grid-row($column-gap: ms(2), $row-gap: null) {
+  display: grid;
+
+  @include grid-column-gap($column-gap);
+
+  @if $row-gap {
+    @include grid-row-gap($row-gap);
+  }
 }
 
 @mixin container($hasPadding: true) {

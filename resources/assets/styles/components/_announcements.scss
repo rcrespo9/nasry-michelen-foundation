@@ -1,10 +1,8 @@
 .c-announcements {
   @include media-query($lg-mobile) {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: ms(4);
-    row-gap: ms(4);
 
-    @include grid-row(ms(6));
+    @include grid-row($column-gap: ms(6), $row-gap: ms(4));
   }
 
   @include media-query($sm-desktop) {

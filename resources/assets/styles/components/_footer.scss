@@ -30,16 +30,14 @@
 .c-footer__nav {
   @include media-query($sm-mobile) {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: ms(1);
-    row-gap: ms(1);
 
-    @include grid-row;
+    @include grid-row($row-gap: ms(1));
   }
 
   @include media-query($sm-tablet) {
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: initial;
-    row-gap: initial;
+
+    @include grid-row-gap(initial);
   }
 
   > .menu-item:not(:last-of-type) {
@@ -51,13 +49,18 @@
   }
 
   > .menu-item > a {
+    display: block;
+    margin-bottom: ms(-1);
+
     @include footer-header;
   }
 
   .sub-menu {
     .menu-item {
+      line-height: strip-unit(ms(1));
+
       &:not(:last-of-type) {
-        margin-bottom: ms(-11);
+        margin-bottom: ms(-3);
       }
 
       a {
