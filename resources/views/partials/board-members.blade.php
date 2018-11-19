@@ -11,7 +11,7 @@
 
       <li class="c-board-member">
         <figure class="c-board-member__inner">
-          {!! wp_get_attachment_image($picture, 'large') !!}
+          {!! wp_get_attachment_image($picture, 'full') !!}
           <figcaption class="c-board-member__details">
           <span class="details__item details__item--name">{{$name}}</span>
           <span class="details__item details__item--creds">{{$credentials}}</span>

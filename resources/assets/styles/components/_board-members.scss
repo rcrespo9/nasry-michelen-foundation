@@ -2,14 +2,33 @@ ul.l-board-members {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  grid-template-columns: repeat(4, 1fr);
 
-  @include grid-row($row-gap: ms(3));
+  @include media-query($sm-mobile) {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include grid-row($row-gap: ms(4));
+  }
+
+  @include media-query($sm-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-query($lg-tablet) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .c-board-member {
   img {
     margin-bottom: ms(0);
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: ms(3);
+
+    @include media-query($sm-mobile) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -26,13 +45,13 @@ ul.l-board-members {
   }
 
   .details__item--name {
-    margin-bottom: ms(-5);
+    margin-bottom: ms(-4);
     color: $dark-gray;
     font-size: ms(1);
     font-weight: map-get($font-weight, bold);
   }
 
   .details__item--creds {
-    margin-bottom: ms(-6);
+    margin-bottom: ms(-5);
   }
 }
