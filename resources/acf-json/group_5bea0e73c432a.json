@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "preview_size": "full",
             "library": "all",
             "min_width": "",
@@ -44,5 +44,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542068399
+    "modified": 1542907088
 }

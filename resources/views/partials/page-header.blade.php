@@ -1,20 +1,21 @@
 @php
   $parent = get_the_title($post->post_parent);
   $category = get_queried_object();
-  $featuredImage = null;
+  $featuredImageId = null;
   $categoryImage = get_field('featured_category_image', $category);
   $postsHome = get_option('page_for_posts');
 
   if (is_category()) {
-    $featuredImage = $categoryImage;
+    $featuredImageId = $categoryImage;
   } elseif (is_home() && $postsHome) {
-    $featuredImage = get_the_post_thumbnail_url($postsHome, 'full');
+    $featuredImageId = get_post_thumbnail_id($postsHome);
   } else {
-    $featuredImage = get_the_post_thumbnail_url();
+    $featuredImageId = get_post_thumbnail_id();
   }
 @endphp
 
-<header class="c-page-header {{ $featuredImage ? 'has-bg-img' : '' }}" style="{{ $featuredImage ? 'background-image:url(' . $featuredImage .');' : '' }}">
+<header class="c-page-header {{ $featuredImageId ? 'has-bg-img' : '' }}">
+  @php echo App::responsive_featured_img($featuredImageId) @endphp
   <div class="l-wrap">
     <div class="c-page-header__content">
       @if($post->post_parent || is_single())
