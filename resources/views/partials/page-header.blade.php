@@ -15,7 +15,7 @@
 @endphp
 
 <header class="c-page-header {{ $featuredImageId ? 'has-bg-img' : '' }}">
-  @php echo App::responsive_featured_img($featuredImageId) @endphp
+  @php echo App::responsive_bg_img($featuredImageId) @endphp
   <div class="l-wrap">
     <div class="c-page-header__content">
       @if($post->post_parent || is_single())

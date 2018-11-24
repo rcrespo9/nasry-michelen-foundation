@@ -7,7 +7,7 @@
 @endphp
 
 <header class="c-homepage-header {{ has_post_thumbnail() ? 'has-bg-img' : '' }}">
-  @php echo App::responsive_featured_img($featuredImageId) @endphp
+  @php echo App::responsive_bg_img($featuredImageId) @endphp
   <div class="c-homepage-header__wrap l-wrap">
     <div class="c-homepage-header__content">
       <h1 class="c-homepage-header__title">{{ App::title() }}</h1>

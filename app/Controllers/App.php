@@ -35,7 +35,7 @@ class App extends Controller
         return yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
       }      
     }
-    public static function responsive_featured_img($in_img_id) {
+    public static function responsive_bg_img($in_img_id, $in_img_size = 'full', $in_bg_class = '.has-bg-img') {
       $img_srcset = wp_get_attachment_image_srcset( $in_img_id, 'full' );
 
       $sizes = explode( ", ", $img_srcset );
@@ -51,7 +51,7 @@ class App extends Controller
         if( !isset( $split[0], $split[1] ) )
           continue;
 
-        $background_css = '.has-bg-img {
+        $background_css = $in_bg_class . ' {
           background-image: url(' . esc_url( $split[0] ) . ')
         }';
        
