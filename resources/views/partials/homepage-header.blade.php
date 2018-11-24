@@ -1,12 +1,13 @@
 @php
-  $featuredImage = get_the_post_thumbnail_url();
+  $featuredImageId = get_post_thumbnail_id();
   $lead = get_field('homepage_header_lead');
   $blurb = get_field('homepage_header_blurb');
   $ctaURL = get_field('homepage_header_cta_url');
   $ctaText = get_field('homepage_header_cta_text');
 @endphp
 
-<header class="c-homepage-header {{ has_post_thumbnail() ? 'has-bg-img' : '' }}" style="{{ has_post_thumbnail() ? 'background-image:url(' . $featuredImage .');' : '' }}">
+<header class="c-homepage-header {{ has_post_thumbnail() ? 'has-bg-img' : '' }}">
+  @php echo App::responsive_featured_img($featuredImageId) @endphp
   <div class="c-homepage-header__wrap l-wrap">
     <div class="c-homepage-header__content">
       <h1 class="c-homepage-header__title">{{ App::title() }}</h1>
