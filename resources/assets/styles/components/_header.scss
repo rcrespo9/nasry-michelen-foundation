@@ -25,15 +25,15 @@
 }
 
 .c-header__logo {
-  width: ms(9, 0.875rem);
+  font-size: 0.625em;
 
   @include media-query($x-sm-mobile) {
-    width: ms(9);
+    font-size: 0.75em;
   }
 
   .logo__img {
-    width: 100%;
-    height: auto;
+    width: 18.688em;
+    height: 4.875em;
     vertical-align: bottom;
   }
 }
