@@ -1,6 +1,9 @@
 <header class="c-header">
   <div class="c-header__inner l-wrap">
-    <a class="c-header__logo" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+    <a class="c-header__logo" href="{{ home_url('/') }}">
+      <svg class="logo__img"><use xlink:href="#nmf-logo"></use></svg>
+      <span class="o-sr-only">{{ get_bloginfo('name', 'display') }}</span>
+    </a>
     <nav class="c-header__nav js-nav">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav__list js-nav-list', 'container' => '']) !!}

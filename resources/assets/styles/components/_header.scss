@@ -25,9 +25,17 @@
 }
 
 .c-header__logo {
-  color: $dark-cyan;
-  font-size: ms(0);
-  font-weight: map-get($font-weight, semi-bold);
+  width: ms(9, 0.875rem);
+
+  @include media-query($x-sm-mobile) {
+    width: ms(9);
+  }
+
+  .logo__img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
 }
 
 .c-header__nav {
@@ -159,7 +167,7 @@
         &::after {
           content: "";
           position: absolute;
-          bottom: ms(1, 0.875rem);
+          bottom: ms(2);
           left: 50%;
           width: 100%;
           height: 3px;
